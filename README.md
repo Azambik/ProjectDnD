@@ -1,34 +1,19 @@
 How to standup the application
 
-
 Required Software:
-
     Node:
-    
         https://nodejs.org/dist/latest-v12.x/
-        
         1. Download and Install
-        
         Verify installation by executing `npm --version` in terminal 
-        
     Angular:
-    
         1. Once node is installed, execute `npm i -g @angular/cli@11.0.3`
-        
         Verify installation by executing `ng --version` in terminal
-        
     Java 11:
-    
         https://download.java.net/openjdk/jdk11/ri/openjdk-11+28_windows-x64_bin.zip
-        
         1. Extract files somewhere
-        
         2. Open/Edit Environment Variables
-        
             Linux:
-            
                 a1. if exists remove `sudo rm /usr/bin/java`
-                
                 a2. Set soft link `sudo ln -s <path to java/bin> /usr/bin/java`
                 
             Windows:
