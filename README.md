@@ -7,18 +7,17 @@
 >1. If using .msi installer, install then skip to the end and verify.
 >2. If using binaries, extract files somewhere
 >3. If Open/Edit Environment Variables
->  * Linux:   
->      1. if node exists, remove `sudo rm /usr/bin/node`
->       2. Set soft link `sudo ln -s <path to bin/node> /usr/bin/node`           
->       3. if npm exists, remove `sudo rm /usr/bin/npm`
->       4. Set soft link `sudo ln -s <path to bin/npm> /usr/bin/java`
->   * Windows:
->           1. open Environment Variables program
->            2. In System Variables, edit path
->            3. If a JDK path exists, remove this path
->            4. Add a new path that points to the new java bin directory 
->    Verify installation by executing `java -version` in terminal
->    Verify installation by executing `npm --version` in terminal 
+>       1. Linux:   
+>               1. if node exists, remove `sudo rm /usr/bin/node`
+>               2. Set soft link `sudo ln -s <path to bin/node> /usr/bin/node`           
+>               3. if npm exists, remove `sudo rm /usr/bin/npm`
+>               4. Set soft link `sudo ln -s <path to bin/npm> /usr/bin/java`
+>       1. Windows:
+>               1. open Environment Variables program
+>               2. In System Variables, edit path
+>               3. If a node and npm path exists, remove them
+>               4. Add a new path that points to the new node bin directory (npm is inside the node bin)
+>Verify installation by executing `npm --version` in terminal 
         
     Angular:
     
