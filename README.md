@@ -1,7 +1,7 @@
 # How to standup the application
 
 ## Required Software:
-
+<pre>
 ### Node:
 >https://nodejs.org/dist/latest-v12.x/   
 >1. If using .msi installer, install then skip to the end and verify.
@@ -19,7 +19,7 @@
 >               4. Add a new path that points to the new node bin directory (npm is inside the node bin)
 >
 >Verify installation by executing `npm --version` in terminal 
-        
+</pre>   
     Angular:
     
         1. Once node is installed, execute `npm i -g @angular/cli@11.0.3`
