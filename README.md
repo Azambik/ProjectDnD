@@ -146,7 +146,7 @@
         
         4. Expand `SPRING BOOT DASHBOARD` click `Play` (look at the debug console)
         
-        5. Click `Stop` button to shutdown the backend
+        (Click `Stop` button to shutdown the backend)
         
 
     Frontend:
@@ -159,7 +159,7 @@
         
         4. Execute `ng serve` to serve the application at `localhost:4200`.
         
-        5. `Ctrl + C` in terminal to shutdown the front-end.
+        (`Ctrl + C` in terminal to shutdown the front-end.)
 
 
 ## Visit http://localhost:4200 
