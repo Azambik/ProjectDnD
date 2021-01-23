@@ -1,8 +1,8 @@
 # How to standup the application
 
-## Required Software:
+## Required Software
 
-### Node:
+### Node
     
         https://nodejs.org/dist/latest-v12.x/   
         
@@ -34,13 +34,13 @@
                 
         Verify installation by executing `npm --version` in terminal
         
-### Angular:
+### Angular
     
         1. Once node is installed, execute `npm i -g @angular/cli@11.0.3`
         
         Verify installation by executing `ng --version` in terminal
         
-### Java 11:
+### Java 11
     
         https://download.java.net/openjdk/jdk11/ri/openjdk-11+28_windows-x64_bin.zip
         
@@ -66,7 +66,7 @@
                 
         Verify installation by executing `java -version` in terminal
         
-### Gradle 6.7.1:
+### Gradle 6.7.1
     
         https://gradle.org/next-steps/?version=6.7.1&format=bin
         
@@ -92,7 +92,7 @@
                 
         Verify installation by executing `gradle --version`
         
-### Visual Studio Code:
+### Visual Studio Code
     
         https://code.visualstudio.com/
         
@@ -118,14 +118,14 @@
         
         1. Download and Install
 
-## Installing the ui node packages:
+## Installing the ui node packages
 
     1. Navigate to `<project root>/ui` in terminal
     
     2. Execute `npm i` in terminal
     
 
-## Setting the database password:
+## Setting the database password
 
     1. Open `projectdnd` root folder (where the README.md lives)
     
