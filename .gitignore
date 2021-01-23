@@ -35,5 +35,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### custom ###
 ui/node_modules/
 ui/dist/
+src/main/resources/application.properties
