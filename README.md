@@ -129,9 +129,13 @@
 
     1. Open `projectdnd` root folder (where the README.md lives)
     
-    2. Open `src/main/resources/application.properties`
+    2. Copy `src/main/resources/application.properties_template` to the same folder (src/main/resources/)
+
+    3. Rename the new copy to `application.properties`
+
+    4. Do not delete the template, leave it there unchanged.
     
-    3. Fill in database password here: `spring.datasource.password=`
+    5. In the newly copied and renamed `application.properties` file, fill in database password here: `spring.datasource.password=`
     
 
 ## Building and Running the Application
