@@ -1,25 +1,22 @@
 # How to standup the application
 
 ## Required Software:
-<pre>
 ### Node:
 >https://nodejs.org/dist/latest-v12.x/   
 >1. If using .msi installer, install then skip to the end and verify.
 >2. If using binaries, extract files somewhere
->3. If Open/Edit Environment Variables
->       Linux:
+>3. If Open/Edit Environment Variables <br/>
+>       Linux:<br/>
 >               1. if node exists, remove `sudo rm /usr/bin/node`
 >               2. Set soft link `sudo ln -s <path to bin/node> /usr/bin/node`
 >               3. if npm exists, remove `sudo rm /usr/bin/npm`
->               4. Set soft link `sudo ln -s <path to bin/npm> /usr/bin/java`
->       Windows:
+>               4. Set soft link `sudo ln -s <path to bin/npm> /usr/bin/java`<br/>
+>       Windows:<br/>
 >               1. open Environment Variables program
 >               2. In System Variables, edit path
 >               3. If a node and npm path exists, remove them
->               4. Add a new path that points to the new node bin directory (npm is inside the node bin)
->
->Verify installation by executing `npm --version` in terminal 
-</pre>   
+>               4. Add a new path that points to the new node bin directory (npm is inside the node bin)<br/>
+>Verify installation by executing `npm --version` in terminal  
     Angular:
     
         1. Once node is installed, execute `npm i -g @angular/cli@11.0.3`
