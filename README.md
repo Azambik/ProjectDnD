@@ -2,7 +2,7 @@
 
 ## Required Software:
 
-    Node:
+    ### Node:
     
         https://nodejs.org/dist/latest-v12.x/   
         
@@ -34,7 +34,7 @@
                 
         Verify installation by executing `npm --version` in terminal
         
-    Angular:
+    ### Angular:
     
         1. Once node is installed, execute `npm i -g @angular/cli@11.0.3`
         
