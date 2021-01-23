@@ -17,6 +17,7 @@
 >               2. In System Variables, edit path
 >               3. If a node and npm path exists, remove them
 >               4. Add a new path that points to the new node bin directory (npm is inside the node bin)
+>
 >Verify installation by executing `npm --version` in terminal 
         
     Angular:
