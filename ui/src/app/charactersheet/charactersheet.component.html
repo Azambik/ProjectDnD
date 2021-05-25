@@ -1,2 +1,131 @@
-<p>charactersheet works!</p>
-Testtest
+<cdk-virtual-scroll-viewport [itemSize]="275" style="height: 850px">
+<div class="bg-dark character-sheet">
+    <div class="description-panel container">
+        <div class="row">
+            <div class=" col-md">
+                <label class="text-light"for="class&level">Class & Level</label>
+                <input type="text" name="class&level">
+            </div>
+            <div class=" col-md">
+                <label class="text-light"for="background">Background</label>
+                <input type="text" name="background">
+            </div>
+            <div class=" col-md">
+                <label class="text-light"for="playername">Player Name</label>
+                <input type="text" name="playername">
+            </div>
+            <div class=" col-md">
+                <label class="text-light"for="faction">Faction</label>
+                <br>
+                <input type="text" name="faction">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class=" col-4">
+                <label class="text-light"for="race">Race</label>
+                <br>
+                <input type="text" name="race">
+            </div>
+            <div class=" col-4">
+                <label class="text-light"for="alignment">Alignment</label>
+                <br>
+                <input type="text" name="alignment">
+            </div>
+            <div class=" col-4">
+                <label class="text-light"for="exp">Experience Points</label>
+                <br>
+                <input type="number" name="exp">
+            </div>
+        </div>
+        
+        
+    </div>
+    <div class="stat-panel float-left container">
+        <div class="row">
+            <div class=" col-4">
+                <label class="text-light" for="str">Strength</label>
+                <br>
+                <input type="number" name="str">
+                <br>
+                <label class="text-light" for="str-mod">modifier</label>
+                <br>
+                <input type="number" name="str-mod" readonly>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-4">
+                <label class="text-light" for="Dex">Dexterity</label>
+                <br>
+                <input type="number" name="dex">
+                <br>
+                <label class="text-light" for="str-mod">modifier</label>
+                <br>
+                <input type="number" name="dex-mod" readonly>
+                <br>
+                <br>
+                <br>
+            </div>
+       </div>
+       <div class="row">
+            <div class=" col-4">
+                <label class="text-light" for="con">Constitution</label>
+                <br>
+                <input type="number" name="con">
+                <br>
+                <label class="text-light" for="str-mod">modifier</label>
+                <br>
+                <input type="number" name="con-mod" readonly>
+                <br>
+                <br>
+                <br>
+            </div>
+       </div>
+       <div class="row">
+            <div class=" col-4">
+                <label class="text-light" for="int">Intelligence</label>
+                <br>
+                <input type="number" name="int">
+                <br>
+                <label class="text-light" for="str-mod">modifier</label>
+                <br>
+                <input type="number" name="int-mod" readonly>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-4">
+               <label class="text-light" for="wis">Wisdom</label>
+               <br>
+               <input type="number" name="wis">
+               <br>
+                <label class="text-light" for="str-mod">modifier</label>
+                <br>
+               <input type="number" name="wis-mod" readonly>
+               <br>
+                <br>
+                <br>
+           </div>
+       </div>
+       <div class="row">
+            <div class=" col-4">
+                <label class="text-light" for="cha">Charisma</label>
+                <br>
+                <input type="number" name="cha">
+                <br>
+                <label class="text-light" for="str-mod">modifier</label>
+                <br>
+                <input type="number" name="cha-mod" readonly>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+</cdk-virtual-scroll-viewport>

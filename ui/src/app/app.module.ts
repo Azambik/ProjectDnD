@@ -7,12 +7,11 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CharactersheetComponent } from './charactersheet/charactersheet.component';
-
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
     AppComponent,
-    
     NavigationBarComponent,
     FooterComponent,
     HeaderComponent,
@@ -21,7 +20,8 @@ import { CharactersheetComponent } from './charactersheet/charactersheet.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
