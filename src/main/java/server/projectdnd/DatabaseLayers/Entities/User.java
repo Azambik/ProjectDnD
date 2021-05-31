@@ -1,5 +1,6 @@
 package server.projectdnd.DatabaseLayers.Entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
