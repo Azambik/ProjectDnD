@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharactersheetComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
+  }
+
+  loadCharacterSheet(): void {
+//example of how to set up a fetch request 
+    this.httpClient.get('http://192.168.1.224:8080/getCharacterSheet')
+    .toPromise().then((response: any) => {
+      console.log(response);
+    }).catch((error: any) => {
+      console.log(error);
+    });
+
   }
 
 }

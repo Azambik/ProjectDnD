@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CharactersheetComponent } from './charactersheet/charactersheet.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { DescriptionpanelComponent } from './descriptionpanel/descriptionpanel.component';
+import { StatpanelComponent } from './statpanel/statpanel.component';
+import { SkillsavepanelComponent } from './skillsavepanel/skillsavepanel.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     FooterComponent,
     HeaderComponent,
     CharactersheetComponent,
+    DescriptionpanelComponent,
+    StatpanelComponent,
+    SkillsavepanelComponent,
   ],
   imports: [
     BrowserModule,
