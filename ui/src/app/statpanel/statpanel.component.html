@@ -3,11 +3,12 @@
         <div class=" col-4 ">
             <label class="text-light" for="str">Strength</label>
             <br>
-            <input type="number" name="str">
+            <input type="number" name="str" [ngModel]="strength" (ngModelChange)="strength = $event; strModifierCalc($event)">
             <br>
             <label class="text-light" for="str-mod">modifier</label>
             <br>
-            <input type="number" name="str-mod" readonly>
+            <!-- []for updating fronmt end () for updating back end-->
+            <input type="number" name="str-mod" readonly [ngModel]="strengthModifier">
             <br>
             <br>
             <br>
@@ -18,11 +19,11 @@
         <div class=" col-4">
             <label class="text-light" for="Dex">Dexterity</label>
             <br>
-            <input type="number" name="dex">
+            <input type="number" name="dex" [ngModel]="dexterity" (ngModelChange)="dexterity = $event; dexModifierCalc($event)">
             <br>
             <label class="text-light" for="str-mod">modifier</label>
             <br>
-            <input type="number" name="dex-mod" readonly>
+            <input type="number" name="dex-mod" readonly [ngModel]="dexterityModifier">
             <br>
             <br>
             <br>
@@ -32,11 +33,11 @@
         <div class=" col-4">
             <label class="text-light" for="con">Constitution</label>
             <br>
-            <input type="number" name="con">
+            <input type="number" name="con" [ngModel]="constitution" (ngModelChange)="constitution = $event; conModifierCalc($event)">
             <br>
             <label class="text-light" for="str-mod">modifier</label>
             <br>
-            <input type="number" name="con-mod" readonly>
+            <input type="number" name="con-mod" readonly [ngModel]="constitutionModifier">
             <br>
             <br>
             <br>
@@ -46,11 +47,11 @@
         <div class=" col-4">
             <label class="text-light" for="int">Intelligence</label>
             <br>
-            <input type="number" name="int">
+            <input type="number" name="int" [ngModel]="intelligence" (ngModelChange)="intelligence = $event; intModifierCalc($event)">
             <br>
             <label class="text-light" for="str-mod">modifier</label>
             <br>
-            <input type="number" name="int-mod" readonly>
+            <input type="number" name="int-mod" readonly [ngModel]="intelligenceModifier">
             <br>
             <br>
             <br>
@@ -60,11 +61,11 @@
         <div class=" col-4">
            <label class="text-light" for="wis">Wisdom</label>
            <br>
-           <input type="number" name="wis">
+           <input type="number" name="wis" [ngModel]="wisdom" (ngModelChange)="wisdom = $event; wisModifierCalc($event)">
            <br>
             <label class="text-light" for="str-mod">modifier</label>
             <br>
-           <input type="number" name="wis-mod" readonly>
+           <input type="number" name="wis-mod" readonly [ngModel]="wisdomModifier">
            <br>
             <br>
             <br>
@@ -74,11 +75,11 @@
         <div class=" col-4">
             <label class="text-light" for="cha">Charisma</label>
             <br>
-            <input type="number" name="cha">
+            <input type="number" name="cha" [ngModel]="charisma" (ngModelChange)="charisma = $event; chrModifierCalc($event)">
             <br>
             <label class="text-light" for="str-mod">modifier</label>
             <br>
-            <input type="number" name="cha-mod" readonly>
+            <input type="number" name="cha-mod" readonly [ngModel]="charismaModifier">
             <br>
             <br>
             <br>

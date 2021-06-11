@@ -11,6 +11,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { DescriptionpanelComponent } from './descriptionpanel/descriptionpanel.component';
 import { StatpanelComponent } from './statpanel/statpanel.component';
 import { SkillsavepanelComponent } from './skillsavepanel/skillsavepanel.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SkillsavepanelComponent } from './skillsavepanel/skillsavepanel.compone
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ScrollingModule
+    ScrollingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
