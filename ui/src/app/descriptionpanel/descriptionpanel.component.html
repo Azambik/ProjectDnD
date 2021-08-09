@@ -1,21 +1,22 @@
 <div class="description-panel">
     <div class="row">
         <div class=" col-md">
-            <label class="text-light"for="class&level">Class & Level</label>
-            <input type="text" name="class&level">
+            <label class="text-light"for="classlevel">Class & Level</label>
+            <input type="text" id="classlevel" name="classlevel" (ngModelChange)="classlevel = $event; updateclasslevel($event)" [ngModel]=classlevel>
         </div>
         <div class=" col-md">
             <label class="text-light"for="background">Background</label>
-            <input type="text" name="background">
+            <input type="text" id="background" name="background" (ngModelChange)="background = $event; updateBackground($event)" [ngModel]="background">
         </div>
         <div class=" col-md">
             <label class="text-light"for="playername">Player Name</label>
-            <input type="text" name="playername">
+                                                                 <!--out-->                                                      <!--in-->
+            <input type="text" id="playername" name="playername" (ngModelChange)="playername = $event; updatePlayername($event)" [ngModel]="playername">
         </div>
         <div class=" col-md">
             <label class="text-light"for="faction">Faction</label>
             <br>
-            <input type="text" name="faction">
+            <input type="text" id="faction" name="faction" (ngModelChange)="faction = $event; updateFaction($event)" [ngModel]="faction">
         </div>
     </div>
     <br>
@@ -23,17 +24,17 @@
         <div class=" col-4">
             <label class="text-light"for="race">Race</label>
             <br>
-            <input type="text" name="race">
+            <input type="text" is="race" name="race" (ngModelChange)="race = $event; updateRace($event)" [ngModel]="race" >
         </div>
         <div class=" col-4">
             <label class="text-light"for="alignment">Alignment</label>
             <br>
-            <input type="text" name="alignment">
+            <input type="text" id="alignment" name="alignment" (ngModelChange)="alignment = $event; updateAlignment($event)" [ngModel]="alignment">
         </div>
         <div class=" col-4">
             <label class="text-light"for="exp">Experience Points</label>
             <br>
-            <input type="number" name="exp">
+            <input type="number" id="exp" name="exp" (ngModelChange)="exp = $event; updateExp($event)" [ngModel]="exp">
         </div>
     </div> 
 </div>

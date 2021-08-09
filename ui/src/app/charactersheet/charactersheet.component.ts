@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import {CharactersheetService} from '../../charactersheet.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-charactersheet',
@@ -7,10 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./charactersheet.component.scss']
 })
 export class CharactersheetComponent implements OnInit {
+  constructor(private httpClient: HttpClient,private charactersheetService: CharactersheetService, private router: Router ) { }
 
-  constructor(private httpClient: HttpClient) { }
-
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   loadCharacterSheet(): void {
@@ -23,5 +24,8 @@ export class CharactersheetComponent implements OnInit {
     });
 
   }
-
+  
+  createCharacterSheet(){
+    this.charactersheetService.printCharacter();
+  }
 }
