@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CharactersheetService} from '../../charactersheet.service';
 
 @Component({
   selector: 'app-statpanel',
@@ -6,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./statpanel.component.scss']
 })
 export class StatpanelComponent implements OnInit {
-
-  constructor() { }
   strength: number = 0;
   dexterity: number =0;
   constitution: number =0;
@@ -20,8 +19,11 @@ export class StatpanelComponent implements OnInit {
   intelligenceModifier: number =0;
   wisdomModifier: number =0;
   charismaModifier: number =0;
+  constructor(private charactersheetService:CharactersheetService) { }
 
-  strModifierCalc(strength: number){
+  
+  strModifierCalc(strength: number): void {
+	this.charactersheetService.characterSheet.statPanel.strength = strength;
     if(strength == 1) {
 			this.strengthModifier = -5;
 		}
@@ -71,7 +73,8 @@ export class StatpanelComponent implements OnInit {
 			this.strengthModifier = 10;
 		}
   }
-  dexModifierCalc(dexterity: number){
+  dexModifierCalc(dexterity: number): void {
+	this.charactersheetService.characterSheet.statPanel.dexterity = dexterity;
     if(dexterity == 1) {
 			this.dexterityModifier = -5;
 		}
@@ -121,8 +124,9 @@ export class StatpanelComponent implements OnInit {
 			this.dexterityModifier = 10;
 		}
   }
-  conModifierCalc(constitution: number){
-    if(constitution == 1) {
+  conModifierCalc(constitution: number): void{
+	    this.charactersheetService.characterSheet.statPanel.constitution = constitution;
+    	if(constitution == 1) {
 			this.constitutionModifier = -5;
 		}
 		if(constitution == 2 || constitution == 3) {
@@ -171,8 +175,9 @@ export class StatpanelComponent implements OnInit {
 			this.constitutionModifier = 10;
 		}
   }
-  intModifierCalc(intelligence: number){
-    if(intelligence == 1) {
+  intModifierCalc(intelligence: number): void{
+	    this.charactersheetService.characterSheet.statPanel.intelligence = intelligence;
+    	if(intelligence == 1) {
 			this.intelligenceModifier = -5;
 		}
 		if(intelligence  == 2 || intelligence  == 3) {
@@ -221,8 +226,9 @@ export class StatpanelComponent implements OnInit {
 			this.intelligenceModifier = 10;
 		}
   }
-  wisModifierCalc(wisdom: number){
-    if(wisdom == 1) {
+  wisModifierCalc(wisdom: number): void{
+		this.charactersheetService.characterSheet.statPanel.wisdom = wisdom;
+    	if(wisdom == 1) {
 			this.wisdomModifier = -5;
 		}
 		if(wisdom == 2 || wisdom == 3) {
@@ -271,8 +277,9 @@ export class StatpanelComponent implements OnInit {
 			this.wisdomModifier = 10;
 		}
   }
-  chrModifierCalc(charisma: number){
-    if(charisma == 1) {
+  chrModifierCalc(charisma: number): void{
+		this.charactersheetService.characterSheet.statPanel.charisma = charisma;
+    	if(charisma == 1) {
 			this.charismaModifier = -5;
 		}
 		if(charisma == 2 || charisma == 3) {
@@ -323,7 +330,13 @@ export class StatpanelComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
+  ngOnInit() {
+	this.strength = this.charactersheetService.characterSheet.statPanel.strength;
+	this.strength = this.charactersheetService.characterSheet.statPanel.dexterity;
+	this.strength = this.charactersheetService.characterSheet.statPanel.constitution;
+	this.strength = this.charactersheetService.characterSheet.statPanel.intelligence;
+	this.strength = this.charactersheetService.characterSheet.statPanel.wisdom;
+	this.strength = this.charactersheetService.characterSheet.statPanel.charisma;
   }
 
 }

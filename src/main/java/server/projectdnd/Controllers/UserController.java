@@ -21,7 +21,7 @@ public class UserController {
     
     @Autowired
     private CharacterSheetRepository characterSheetRepo;
-
+    //seting get request to send character sheet.
     @GetMapping("/getCharacterSheet")
     public CharacterSheetDTO getCharacterSheet() {
     	
@@ -34,4 +34,8 @@ public class UserController {
     	
     	return sheet;
     }
+    //@PostMapping("/saveCharacterSheet")
+    //public CharacterSheetSave create(@Valid @RequestBody CharacterSheet characterSheet ){
+    //    return CharacterSheetRepository.save(characterSheet);
+   // }
 }
