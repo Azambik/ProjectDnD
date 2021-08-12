@@ -25,7 +25,14 @@ export class CharactersheetService {
       charisma: 0,
     },
     skillSavePanel: {
-
+      inspiration: 0,
+      proficiencyBonus: 0,
+      strengthSave: 0,
+      dexteritySave: 0,
+      constitutionSave: 0,
+      intelligenceSave: 0,
+      wisdomSave: 0,
+      charismaSave: 0,
     }
   };
 

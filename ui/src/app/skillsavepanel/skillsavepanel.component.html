@@ -3,14 +3,14 @@
         <div class="col-4">
             <label class="text-light" for="insp">Inspiration</label>
             <br>
-            <input type="number" name="insp">
+            <input type="number" id="insp" name="insp" [ngModel]="inspiration" (ngModelChange)="inspiration = $event; updateInsperation($event)">
         </div>
     </div>
     <div class="row">
         <div class="col-4">
             <label class="text-light" for="prof-bonus">Proficiency Bonus</label>
             <br>
-            <input type="number" name="prof-bonus">
+            <input type="number" id="prof-bonus" name="prof-bonus" [ngModel]="proficiencyBonus" (ngModelChange)="proficiencyBonus = $event; updateproficiencyBonus($event)">
         </div>
         
     </div>
@@ -23,7 +23,7 @@
             <input type="checkbox" name='str-save'>
             <label class="text-light" for="str-save">Strength</label>
             <br>
-            <input type="number" name="str-save">
+            <input type="number" id="str-save" name="str-save" [ngModel]="strengthSave" (ngModelChange)="strengthSave = $event; updatestrengthSave($event)">
         </div>
     </div>
     <div class="row">
@@ -31,7 +31,7 @@
             <input type="checkbox" name='dex-save'>
             <label class="text-light" for="dex-save">Dexterity</label>
             <br>
-            <input type="number" name="dex-save">
+            <input type="number" name="dex-save" [ngModel]="dexteritySave" (ngModelChange)="dexteritySave= $event; updatedexteritySave($event)">
         </div>
     </div>
     <div class="row">
@@ -39,7 +39,7 @@
             <input type="checkbox" name='con-save'>
             <label class="text-light" for="con-save">Constitution</label>
             <br>
-            <input type="number" name="cpm-save">
+            <input type="number" name="con-save" [ngModel]="constitutionSave" (ngModelChange)="constitutionSave= $event; updateconstitutionSave($event)">
         </div>
     </div>
     <div class="row">
@@ -47,7 +47,7 @@
             <input type="checkbox" name='int-save'>
             <label class="text-light" for="int-save">Intelligence</label>
             <br>
-            <input type="number" name="int-save">
+            <input type="number" name="int-save" [ngModel]="intelligenceSave" (ngModelChange)="intelligenceSave= $event; updateintelligenceSave($event)">
         </div>
     </div>
     <div class="row">
@@ -55,7 +55,7 @@
             <input type="checkbox" name='wiz-save'>
             <label class="text-light" for="wiz-save">Wisdom</label>
             <br>
-            <input type="number" name="wiz-save">
+            <input type="number" name="wiz-save" [ngModel]="wisdomSave" (ngModelChange)="wisdomSave= $event; updatewisdomSave($event)">
         </div>
     </div>
     <div class="row">
@@ -63,7 +63,7 @@
             <input type="checkbox" name='cha-save'>
             <label class="text-light" for="cha-save">Charisma</label>
             <br>
-            <input type="number" name="cha-save">
+            <input type="number" name="cha-save" [ngModel]="charismaSave" (ngModelChange)="charismaSave= $event; updatecharismaSave($event)">
         </div>
     </div>
 </div>
