@@ -20,50 +20,50 @@
     <div class="save-box">
     <div class="row">
         <div class="col-4">
-            <input type="checkbox" name='str-save'>
+            <input type="checkbox" name='str-save' [ngModel]="strengthTick" (ngModelChange)="strengthTick = $event; updateStrengthTick($event)">
             <label class="text-light" for="str-save">Strength</label>
             <br>
-            <input type="number" id="str-save" name="str-save" [ngModel]="strengthSave" (ngModelChange)="strengthSave = $event; updatestrengthSave($event)">
+            <input type="number" id="str-save" name="str-save" [ngModel]="strengthSave" (ngModelChange)="strengthSave = $event; updateStrengthSave($event)">
         </div>
     </div>
     <div class="row">
         <div class="col-4">
-            <input type="checkbox" name='dex-save'>
+            <input type="checkbox" name='dex-save' [ngModel]="dexterityTick" (ngModelChange)="dexterityTick = $event; updateDexterityTick($event)">
             <label class="text-light" for="dex-save">Dexterity</label>
             <br>
-            <input type="number" name="dex-save" [ngModel]="dexteritySave" (ngModelChange)="dexteritySave= $event; updatedexteritySave($event)">
+            <input type="number" name="dex-save" [ngModel]="dexteritySave" (ngModelChange)="dexteritySave= $event; updateDexteritySave($event)">
         </div>
     </div>
     <div class="row">
         <div class="col-4">
-            <input type="checkbox" name='con-save'>
+            <input type="checkbox" name='con-save' [ngModel]="constitutionTick" (ngModelChange)="constitutionTick = $event; updateConstitutionTick($event)">
             <label class="text-light" for="con-save">Constitution</label>
             <br>
-            <input type="number" name="con-save" [ngModel]="constitutionSave" (ngModelChange)="constitutionSave= $event; updateconstitutionSave($event)">
+            <input type="number" name="con-save" [ngModel]="constitutionSave" (ngModelChange)="constitutionSave= $event; updateConstitutionSave($event)">
         </div>
     </div>
     <div class="row">
         <div class="col-4">
-            <input type="checkbox" name='int-save'>
+            <input type="checkbox" name='int-save' [ngModel]="intelligenceTick" (ngModelChange)="intelligenceTick = $event; updateIntelligenceTick($event)">
             <label class="text-light" for="int-save">Intelligence</label>
             <br>
-            <input type="number" name="int-save" [ngModel]="intelligenceSave" (ngModelChange)="intelligenceSave= $event; updateintelligenceSave($event)">
+            <input type="number" name="int-save" [ngModel]="intelligenceSave" (ngModelChange)="intelligenceSave= $event; updateIntelligenceSave($event)">
         </div>
     </div>
     <div class="row">
         <div class="col-4">
-            <input type="checkbox" name='wiz-save'>
+            <input type="checkbox" name='wiz-save'[ngModel]="wisdomTick" (ngModelChange)="wisdomTick = $event; updateWisdomTick($event)">
             <label class="text-light" for="wiz-save">Wisdom</label>
             <br>
-            <input type="number" name="wiz-save" [ngModel]="wisdomSave" (ngModelChange)="wisdomSave= $event; updatewisdomSave($event)">
+            <input type="number" name="wiz-save" [ngModel]="wisdomSave" (ngModelChange)="wisdomSave= $event; updateWisdomSave($event)">
         </div>
     </div>
     <div class="row">
         <div class="col-4">
-            <input type="checkbox" name='cha-save'>
+            <input type="checkbox" name='cha-save' [ngModel]="charismaTick" (ngModelChange)="charismaTick = $event; updateCharismaTick($event)">
             <label class="text-light" for="cha-save">Charisma</label>
             <br>
-            <input type="number" name="cha-save" [ngModel]="charismaSave" (ngModelChange)="charismaSave= $event; updatecharismaSave($event)">
+            <input type="number" name="cha-save" [ngModel]="charismaSave" (ngModelChange)="charismaSave= $event; updateCharismaSave($event)">
         </div>
     </div>
 </div>

@@ -33,6 +33,12 @@ export class CharactersheetService {
       intelligenceSave: 0,
       wisdomSave: 0,
       charismaSave: 0,
+      strengthTick: false,
+      dexterityTick: false,
+      constitutionTick: false,
+      intelligenceTick: false,
+      wisdomTick: false,
+      charismaTick: false
     }
   };
 

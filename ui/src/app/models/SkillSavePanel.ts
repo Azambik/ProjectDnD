@@ -9,4 +9,10 @@ export interface SkillSavePanel {
     intelligenceSave: number;
     wisdomSave: number;
     charismaSave: number;
+    strengthTick: boolean;
+    dexterityTick: boolean;
+    constitutionTick: boolean;
+    intelligenceTick: boolean;
+    wisdomTick: boolean;
+    charismaTick: boolean;
 }
