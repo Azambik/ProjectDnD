@@ -12,6 +12,7 @@ import { DescriptionpanelComponent } from './descriptionpanel/descriptionpanel.c
 import { StatpanelComponent } from './statpanel/statpanel.component';
 import { SkillsavepanelComponent } from './skillsavepanel/skillsavepanel.component';
 import { FormsModule } from '@angular/forms';
+import { SkillpanelComponent } from './skillpanel/skillpanel.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     DescriptionpanelComponent,
     StatpanelComponent,
     SkillsavepanelComponent,
+    SkillpanelComponent,
   ],
   imports: [
     BrowserModule,
