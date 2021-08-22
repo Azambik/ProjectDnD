@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { characterSheetComponent } from './charactersheet/charactersheet.component';
+import { characterSheetComponent } from './characterSheet/characterSheet.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { descriptionPanelComponent } from './descriptionpanel/descriptionpanel.component';
 import { statPanelComponent } from './statpanel/statpanel.component';
