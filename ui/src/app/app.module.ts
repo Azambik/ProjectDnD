@@ -8,11 +8,11 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CharacterSheetComponent } from './charactersheet/charactersheet.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { DescriptionpanelComponent } from './descriptionpanel/descriptionpanel.component';
-import { StatpanelComponent } from './statpanel/statpanel.component';
-import { SkillsavepanelComponent } from './skillsavepanel/skillsavepanel.component';
+import { DescriptionPanelComponent } from './descriptionpanel/descriptionpanel.component';
+import { statPanelComponent } from './statpanel/statpanel.component';
+import { skillSavePanelComponent } from './skillsavepanel/skillsavepanel.component';
 import { FormsModule } from '@angular/forms';
-import { SkillpanelComponent } from './skillpanel/skillpanel.component';
+import { SkillPanelComponent } from './skillpanel/skillpanel.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +21,10 @@ import { SkillpanelComponent } from './skillpanel/skillpanel.component';
     FooterComponent,
     HeaderComponent,
     CharacterSheetComponent,
-    DescriptionpanelComponent,
-    StatpanelComponent,
-    SkillsavepanelComponent,
-    SkillpanelComponent,
+    DescriptionPanelComponent,
+    statPanelComponent,
+    skillSavePanelComponent,
+    SkillPanelComponent,
   ],
   imports: [
     BrowserModule,

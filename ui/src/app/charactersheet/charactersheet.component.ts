@@ -4,9 +4,9 @@ import {CharacterSheetService} from '../../charactersheet.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-charactersheet',
-  templateUrl: './charactersheet.component.html',
-  styleUrls: ['./charactersheet.component.scss']
+  selector: 'app-characterSheet',
+  templateUrl: './characterSheet.component.html',
+  styleUrls: ['./characterSheet.component.scss']
 })
 export class CharacterSheetComponent implements OnInit {
   constructor(private httpClient: HttpClient,private charactersheetService: CharacterSheetService, private router: Router ) { }

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {CharacterSheetService} from '../../charactersheet.service';
 
 @Component({
-  selector: 'app-skillsavepanel',
-  templateUrl: './skillsavepanel.component.html',
-  styleUrls: ['./skillsavepanel.component.scss']
+  selector: 'app-skillSavePanel',
+  templateUrl: './skillSavePanel.component.html',
+  styleUrls: ['./skillSavePanel.component.scss']
 })
-export class SkillsavepanelComponent implements OnInit {
+export class skillSavePanelComponent implements OnInit {
     inspiration: number = 0;
     proficiencyBonus: number = 0;
     strengthSave: number = 0;

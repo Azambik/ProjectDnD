@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {CharacterSheetService} from '../../charactersheet.service';
 
 @Component({
-  selector: 'app-descriptionpanel',
-  templateUrl: './descriptionpanel.component.html',
-  styleUrls: ['./descriptionpanel.component.scss']
+  selector: 'app-descriptionPanel',
+  templateUrl: './descriptionPanel.component.html',
+  styleUrls: ['./descriptionPanel.component.scss']
 })
-export class DescriptionpanelComponent implements OnInit {
+export class DescriptionPanelComponent implements OnInit {
   classLevel:any;
   background: any;
   playerName:any;

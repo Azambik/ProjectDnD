@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {CharacterSheetService} from '../../charactersheet.service';
 
 @Component({
-  selector: 'app-statpanel',
-  templateUrl: './statpanel.component.html',
-  styleUrls: ['./statpanel.component.scss']
+  selector: 'app-statPanel',
+  templateUrl: './statPanel.component.html',
+  styleUrls: ['./statPanel.component.scss']
 })
-export class StatpanelComponent implements OnInit {
+export class statPanelComponent implements OnInit {
   strength: number = 0;
   dexterity: number =0;
   constitution: number =0;
