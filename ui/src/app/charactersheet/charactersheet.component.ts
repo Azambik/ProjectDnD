@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './characterSheet.component.html',
   styleUrls: ['./characterSheet.component.scss']
 })
-export class CharacterSheetComponent implements OnInit {
+export class characterSheetComponent implements OnInit {
   constructor(private httpClient: HttpClient,private charactersheetService: CharacterSheetService, private router: Router ) { }
 
   ngOnInit() {

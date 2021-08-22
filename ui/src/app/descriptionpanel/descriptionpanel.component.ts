@@ -6,7 +6,7 @@ import {CharacterSheetService} from '../../charactersheet.service';
   templateUrl: './descriptionPanel.component.html',
   styleUrls: ['./descriptionPanel.component.scss']
 })
-export class DescriptionPanelComponent implements OnInit {
+export class descriptionPanelComponent implements OnInit {
   classLevel:any;
   background: any;
   playerName:any;

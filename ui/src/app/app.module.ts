@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { CharacterSheetComponent } from './charactersheet/charactersheet.component';
+import { characterSheetComponent } from './charactersheet/charactersheet.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { DescriptionPanelComponent } from './descriptionpanel/descriptionpanel.component';
+import { descriptionPanelComponent } from './descriptionpanel/descriptionpanel.component';
 import { statPanelComponent } from './statpanel/statpanel.component';
 import { skillSavePanelComponent } from './skillsavepanel/skillsavepanel.component';
 import { FormsModule } from '@angular/forms';
-import { SkillPanelComponent } from './skillpanel/skillpanel.component';
+import { skillPanelComponent } from './skillpanel/skillpanel.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +20,11 @@ import { SkillPanelComponent } from './skillpanel/skillpanel.component';
     NavigationBarComponent,
     FooterComponent,
     HeaderComponent,
-    CharacterSheetComponent,
-    DescriptionPanelComponent,
+    characterSheetComponent,
+    descriptionPanelComponent,
     statPanelComponent,
     skillSavePanelComponent,
-    SkillPanelComponent,
+    skillPanelComponent,
   ],
   imports: [
     BrowserModule,
