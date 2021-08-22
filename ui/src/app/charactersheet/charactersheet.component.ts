@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import {CharactersheetService} from '../../charactersheet.service';
+import {CharacterSheetService} from '../../charactersheet.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   templateUrl: './charactersheet.component.html',
   styleUrls: ['./charactersheet.component.scss']
 })
-export class CharactersheetComponent implements OnInit {
-  constructor(private httpClient: HttpClient,private charactersheetService: CharactersheetService, private router: Router ) { }
+export class CharacterSheetComponent implements OnInit {
+  constructor(private httpClient: HttpClient,private charactersheetService: CharacterSheetService, private router: Router ) { }
 
   ngOnInit() {
   }

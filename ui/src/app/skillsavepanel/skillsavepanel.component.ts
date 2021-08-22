@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CharactersheetService} from '../../charactersheet.service';
+import {CharacterSheetService} from '../../charactersheet.service';
 
 @Component({
   selector: 'app-skillsavepanel',
@@ -21,7 +21,7 @@ export class SkillsavepanelComponent implements OnInit {
     intelligenceTick: boolean = false;
     wisdomTick: boolean = false;
     charismaTick: boolean = false;
-    constructor(private charactersheetService:CharactersheetService) { }
+    constructor(private charactersheetService:CharacterSheetService) { }
   
   ngOnInit() {
     this.inspiration = this.charactersheetService.characterSheet.skillSavePanel.inspiration;
@@ -39,10 +39,10 @@ export class SkillsavepanelComponent implements OnInit {
     this.wisdomTick = this.charactersheetService.characterSheet.skillSavePanel.wisdomTick;
     this.charismaTick = this.charactersheetService.characterSheet.skillSavePanel.charismaTick;
   }
-  updateInsperation(val: number): void {
+  updateInspiration(val: number): void {
     this.charactersheetService.characterSheet.skillSavePanel.inspiration = val;
   }
-  updateproficiencyBonus(val: number): void {
+  updateProficiencyBonus(val: number): void {
     this.charactersheetService.characterSheet.skillSavePanel.proficiencyBonus = val;
   }
   updateStrengthSave(val: number): void {

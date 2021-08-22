@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { CharactersheetComponent } from './charactersheet/charactersheet.component';
+import { CharacterSheetComponent } from './charactersheet/charactersheet.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { DescriptionpanelComponent } from './descriptionpanel/descriptionpanel.component';
 import { StatpanelComponent } from './statpanel/statpanel.component';
@@ -20,7 +20,7 @@ import { SkillpanelComponent } from './skillpanel/skillpanel.component';
     NavigationBarComponent,
     FooterComponent,
     HeaderComponent,
-    CharactersheetComponent,
+    CharacterSheetComponent,
     DescriptionpanelComponent,
     StatpanelComponent,
     SkillsavepanelComponent,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CharactersheetService} from '../../charactersheet.service';
+import {CharacterSheetService} from '../../charactersheet.service';
 
 @Component({
   selector: 'app-statpanel',
@@ -19,7 +19,7 @@ export class StatpanelComponent implements OnInit {
   intelligenceModifier: number =0;
   wisdomModifier: number =0;
   charismaModifier: number =0;
-  constructor(private charactersheetService:CharactersheetService) { }
+  constructor(private charactersheetService:CharacterSheetService) { }
 
   
   strModifierCalc(strength: number): void {

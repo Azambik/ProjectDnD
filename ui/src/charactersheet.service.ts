@@ -4,13 +4,13 @@ import { CharacterSheet } from './app/models/CharacterSheet';
 @Injectable({
   providedIn: 'root'
 })
-export class CharactersheetService {
+export class CharacterSheetService {
 
   characterSheet: CharacterSheet = {
     descriptionPanel: {
-      classlevel: '',
+      classLevel: '',
       background: '',
-      playername: '',
+      playerName: '',
       faction: '',
       race: '',
       alignment: '',

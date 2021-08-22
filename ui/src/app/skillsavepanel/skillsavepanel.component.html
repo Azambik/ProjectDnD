@@ -3,14 +3,14 @@
         <div class="col-4">
             <label class="text-light" for="insp">Inspiration</label>
             <br>
-            <input type="number" id="insp" name="insp" [ngModel]="inspiration" (ngModelChange)="inspiration = $event; updateInsperation($event)">
+            <input type="number" id="insp" name="insp" [ngModel]="inspiration" (ngModelChange)="inspiration = $event; updateInspiration($event)">
         </div>
     </div>
     <div class="row">
         <div class="col-4">
             <label class="text-light" for="prof-bonus">Proficiency Bonus</label>
             <br>
-            <input type="number" id="prof-bonus" name="prof-bonus" [ngModel]="proficiencyBonus" (ngModelChange)="proficiencyBonus = $event; updateproficiencyBonus($event)">
+            <input type="number" id="prof-bonus" name="prof-bonus" [ngModel]="proficiencyBonus" (ngModelChange)="proficiencyBonus = $event; updateProficiencyBonus($event)">
         </div>
         
     </div>

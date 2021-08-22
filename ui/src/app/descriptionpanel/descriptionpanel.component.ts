@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CharactersheetService} from '../../charactersheet.service';
+import {CharacterSheetService} from '../../charactersheet.service';
 
 @Component({
   selector: 'app-descriptionpanel',
@@ -7,20 +7,20 @@ import {CharactersheetService} from '../../charactersheet.service';
   styleUrls: ['./descriptionpanel.component.scss']
 })
 export class DescriptionpanelComponent implements OnInit {
-  classlevel:any;
+  classLevel:any;
   background: any;
-  playername:any;
+  playerName:any;
   faction:any;
   race:any;
   alignment:any;
   exp:any;
-  constructor(private charactersheetService:CharactersheetService) { }
+  constructor(private charactersheetService:CharacterSheetService) { }
 
   ngOnInit() {
    
-    this.classlevel = this.charactersheetService.characterSheet.descriptionPanel.classlevel;
+    this.classLevel = this.charactersheetService.characterSheet.descriptionPanel.classLevel;
     this.background = this.charactersheetService.characterSheet.descriptionPanel.background;
-    this.playername = this.charactersheetService.characterSheet.descriptionPanel.playername;
+    this.playerName = this.charactersheetService.characterSheet.descriptionPanel.playerName;
     this.faction = this.charactersheetService.characterSheet.descriptionPanel.faction;
     this.race = this.charactersheetService.characterSheet.descriptionPanel.race;
     this.alignment = this.charactersheetService.characterSheet.descriptionPanel.alignment;
@@ -28,14 +28,14 @@ export class DescriptionpanelComponent implements OnInit {
   }
 
   
-  updateclasslevel(val : string): void {
-    this.charactersheetService.characterSheet.descriptionPanel.classlevel = val
+  updateClassLevel(val : string): void {
+    this.charactersheetService.characterSheet.descriptionPanel.classLevel = val
   }
   updateBackground(val: string): void {
     this.charactersheetService.characterSheet.descriptionPanel.background = val
   }
-  updatePlayername(val: string): void {
-    this.charactersheetService.characterSheet.descriptionPanel.playername = val;
+  updatePlayerName(val: string): void {
+    this.charactersheetService.characterSheet.descriptionPanel.playerName = val;
   }
   updateFaction(val: string): void {
     this.charactersheetService.characterSheet.descriptionPanel.faction = val;
