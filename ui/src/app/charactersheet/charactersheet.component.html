@@ -2,9 +2,25 @@
 <button label="Get Character Sheet" (click)="loadCharacterSheet()">Load character sheet</button>
 <button label="Create Character Sheet" (click)="createCharacterSheet()">Create/save character sheet</button>
 <div class="bg-dark character-sheet container">
-    <app-descriptionPanel></app-descriptionPanel>
-    <app-statPanel></app-statPanel>
-    <app-skillSavePanel></app-skillSavePanel>
-    <app-skillPanel></app-skillPanel>
+    <div class="row">
+        <div class="col-12">
+            <app-descriptionPanel></app-descriptionPanel>
+        </div>
+    </div>
+    <div class="row">
+        <div class="row-4 px-3">
+            <app-statPanel></app-statPanel>
+        </div>
+        <div class="row-4 px-3">
+            <app-skillSavePanel></app-skillSavePanel>
+        </div>
+        <div class="row-4 px-3">
+            <app-skillPanel></app-skillPanel>
+        </div>
+        <div class="row-4 px-3">
+            <app-combat-panel></app-combat-panel>
+        </div>
+        
+    </div>
 </div>
 </cdk-virtual-scroll-viewport>

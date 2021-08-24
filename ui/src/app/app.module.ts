@@ -13,6 +13,7 @@ import { statPanelComponent } from './statpanel/statpanel.component';
 import { skillSavePanelComponent } from './skillsavepanel/skillsavepanel.component';
 import { FormsModule } from '@angular/forms';
 import { skillPanelComponent } from './skillpanel/skillpanel.component';
+import { CombatPanelComponent } from './combat-panel/combat-panel.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { skillPanelComponent } from './skillpanel/skillpanel.component';
     statPanelComponent,
     skillSavePanelComponent,
     skillPanelComponent,
+    CombatPanelComponent,
   ],
   imports: [
     BrowserModule,
