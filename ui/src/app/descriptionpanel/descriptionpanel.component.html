@@ -1,39 +1,58 @@
 <div class="description-panel">
     <div class="row">
-        <div class=" col-md">
+        <div class="col-3">
+            <label class="text-light"for="characterName">Character name</label>
+        </div>
+        <div class="col-3">
             <label class="text-light"for="classlevel">Class & Level</label>
-            <input type="text" id="classlevel" name="classLevel" (ngModelChange)="classLevel = $event; updateClassLevel($event)" [ngModel]=classLevel>
         </div>
-        <div class=" col-md">
+        <div class="col-3">
             <label class="text-light"for="background">Background</label>
-            <input type="text" id="background" name="background" (ngModelChange)="background = $event; updateBackground($event)" [ngModel]="background">
         </div>
-        <div class=" col-md">
+        <div class="col-3">
             <label class="text-light"for="playerName">Player Name</label>
-                                                                 <!--out-->                                                      <!--in-->
-            <input type="text" id="playerName" name="playerName" (ngModelChange)="playerName = $event; updatePlayerName($event)" [ngModel]="playerName">
-        </div>
-        <div class=" col-md">
-            <label class="text-light"for="faction">Faction</label>
-            <br>
-            <input type="text" id="faction" name="faction" (ngModelChange)="faction = $event; updateFaction($event)" [ngModel]="faction">
         </div>
     </div>
-    <br>
     <div class="row">
-        <div class=" col-4">
+        <div class=" col-3">
+            <input type="text" id="characterName" name="characterName">
+        </div>
+        <div class=" col-3">
+            <input type="text" id="classlevel" name="classLevel" (ngModelChange)="classLevel = $event; updateClassLevel($event)" [ngModel]=classLevel>
+        </div>
+        <div class="col-3">
+            <input type="text" id="background" name="background" (ngModelChange)="background = $event; updateBackground($event)" [ngModel]="background">
+        </div>
+        <div class="col-3">
+                                                                  <!--out-->                                                      <!--in-->
+            <input type="text" id="playerName" name="playerName" (ngModelChange)="playerName = $event; updatePlayerName($event)" [ngModel]="playerName">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label class="text-light"for="faction">Faction</label>
+        </div>
+        <div class="col-3">
             <label class="text-light"for="race">Race</label>
-            <br>
+        </div>
+        <div class="col-3">
+            <label class="text-light"for="alignment">Alignment</label>
+        </div>
+        <div class="col-3">
+            <label class="text-light"for="exp">Experience Points</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <input type="text" id="faction" name="faction" (ngModelChange)="faction = $event; updateFaction($event)" [ngModel]="faction">
+        </div>
+        <div class="col-3">
             <input type="text" is="race" name="race" (ngModelChange)="race = $event; updateRace($event)" [ngModel]="race" >
         </div>
-        <div class=" col-4">
-            <label class="text-light"for="alignment">Alignment</label>
-            <br>
-            <input type="text" id="alignment" name="alignment" (ngModelChange)="alignment = $event; updateAlignment($event)" [ngModel]="alignment">
+        <div class="col-3">
+            <input type="text" id="alignment" name="alignment" (ngModelChange)="alignment = $event; updateAlignment($event)" [ngModel]="alignment">  
         </div>
-        <div class=" col-4">
-            <label class="text-light"for="exp">Experience Points</label>
-            <br>
+        <div class="col-3">
             <input type="number" id="exp" name="exp" (ngModelChange)="exp = $event; updateExp($event)" [ngModel]="exp">
         </div>
     </div> 

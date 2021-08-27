@@ -3,28 +3,22 @@
 <button label="Create Character Sheet" (click)="createCharacterSheet()">Create/save character sheet</button>
 <div class="bg-dark character-sheet container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 pb-5 border border-secondary">
             <app-descriptionPanel></app-descriptionPanel>
         </div>
     </div>
-    <div class="row">
-        <div class="row-4 px-2">
+    <div class="row pt-2">
+        <div class="row-3 p-2  border border-secondary">
             <app-statPanel></app-statPanel>
         </div>
-        <div class="row-4 px-2">
+        <div class="row-3 p-2 border border-secondary">
             <app-skillSavePanel></app-skillSavePanel>
         </div>
-        <div class="row-4 px-3">
+        <div class="row-3 p-2 border border-secondary">
             <app-skillPanel></app-skillPanel>
         </div>
-        <div class="row-4 pl-3">
+        <div class="row-3 p-2 border border-secondary">
             <app-combat-panel></app-combat-panel>
-        </div>
-        <div class="row-4">
-            <app-personality-panel></app-personality-panel>
-        </div>
-        <div class="row-4 p-6">
-            <app-attack-panel></app-attack-panel>
         </div>
     </div>
 </div>
