@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { skillPanelComponent } from './skillpanel/skillpanel.component';
 import { CombatPanelComponent } from './combat-panel/combat-panel.component';
 import { PersonalityPanelComponent } from './personality-panel/personality-panel.component';
+import { AttackPanelComponent } from './attack-panel/attack-panel.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PersonalityPanelComponent } from './personality-panel/personality-panel
     skillPanelComponent,
     CombatPanelComponent,
     PersonalityPanelComponent,
+    AttackPanelComponent,
   ],
   imports: [
     BrowserModule,
