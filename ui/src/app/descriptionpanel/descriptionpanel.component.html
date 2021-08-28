@@ -21,7 +21,7 @@
     </div>
     <div class="row">
         <div class=" col-2">
-            <input type="text" id="characterName" name="characterName">
+            <input type="text" id="characterName" name="characterName" (ngModelChange)="characterName = $event; updateCharacterName($event)" [ngModel]=characterName>
         </div>
         <div class=" col-2">
             <input type="text" id="classlevel" name="classLevel" (ngModelChange)="classLevel = $event; updateClassLevel($event)" [ngModel]=classLevel>
@@ -69,16 +69,16 @@
             <input type="number" id="exp" name="exp" (ngModelChange)="exp = $event; updateExp($event)" [ngModel]="exp">
         </div>
         <div class="col-2">
-            <input type="number" id="age" name="age" >
+            <input type="number" id="age" name="age" (ngModelChange)="age = $event; updateAge($event)" [ngModel]=age>
         </div>
         <div class="col-2">
-            <input type="number" id="height" name="height" >
+            <input type="text" id="height" name="height" (ngModelChange)="height = $event; updateHeight($event)" [ngModel]="height">
         </div>
         <div class="col-2">
-            <input type="number" id="weight" name="weight" >
+            <input type="number" id="weight" name="weight" (ngModelChange)="weight = $event; updateWeight($event)" [ngModel]="weight">
         </div>
         <div class="col-2">
-            <input type="number" id="eyes" name="eyes" >
+            <input type="text" id="eyes" name="eyes" (ngModelChange)="eyes = $event; updateEyes($event)" [ngModel]=eyes>
         </div>
     </div> 
     <div class="row">
@@ -91,10 +91,10 @@
     </div>
     <div class="row">
         <div class="col-2">
-            <input type="number" id="skin" name="skin" >
+            <input type="text" id="skin" name="skin" (ngModelChange)="skin = $event; updateSkin($event)" [ngModel]=skin>
         </div>
         <div class="col-2">
-            <input type="text" id="hair" name="hair">  
+            <input type="text" id="hair" name="hair" (ngModelChange)="hair = $event; updateHair($event)" [ngModel]=hair>  
         </div>
     
     </div>

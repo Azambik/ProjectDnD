@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CharacterSheetService } from 'src/charactersheet.service';
-import { CharacterSheet } from '../models/CharacterSheet';
 
 @Component({
   selector: 'app-equipment-panel',

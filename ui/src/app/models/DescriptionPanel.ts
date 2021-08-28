@@ -8,7 +8,7 @@ export interface DescriptionPanel {
     alignment: string;
     exp: number;
     age: number;
-    height: number;
+    height: string;
     weight: string;
     eyes: string;
     skin: string;

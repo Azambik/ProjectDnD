@@ -1,12 +1,12 @@
 <div class="row">
     <div class="col-4">
-        <input type="number" name="armorClass">
+        <input type="number" name="armorClass" [ngModel]="armorClass" (ngModelChange)="armorClass = $event; updateArmorClass($event)">
     </div>
     <div class="col-4">
-        <input type="number" name="initiative">
+        <input type="number" name="initiative" [ngModel]="initiative" (ngModelChange)="initiative = $event; updateInitiative($event)">
     </div>
     <div class="col-4">
-        <input type="number" name="speed">
+        <input type="number" name="speed" [ngModel]="speed" (ngModelChange)="speed = $event; updateSpeed($event)">
     </div>
     </div>
 <div class="row">
@@ -23,10 +23,10 @@
 
 <div class="row">
     <div class="col-4">
-        <input type="number" name="maxHP">
+        <input type="number" name="hitPointMaximum" [ngModel]="hitPointMaximum" (ngModelChange)="hitPointMaximum = $event; updateHitPointMaximum($event)">
     </div>
     <div class="col-4">
-        <input type="number" name="currentHP">
+        <input type="number" name="currentHitPoints" [ngModel]="currentHitPoints" (ngModelChange)="currentHitPoints = $event; updateCurrentHitPoints($event)">
     </div>
     <div class="col-4">
         <input type="number" name="tempHP">
@@ -52,7 +52,7 @@
 <div class="row">
     <div class="col-4">
         <label class="text-light" for="hitDie">Hit die</label>
-        <input type="text" name="hitDie">
+        <input type="text" name="hitDie" [ngModel]="hitDie" (ngModelChange)="hitDie = $event; updateHitDie($event)">
     </div>
     <div class="col-4">
     </div>>

@@ -17,7 +17,7 @@ export class CharacterSheetService {
       alignment: '',
       exp: 0,
       age: 0,
-      height: 0,
+      height: '',
       weight:  '',
       eyes:  '',
       skin:  '',
