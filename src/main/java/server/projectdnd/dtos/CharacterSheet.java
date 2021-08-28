@@ -1,6 +1,6 @@
 package server.projectdnd.dtos;
 
-public class CharacterSheetDTO {
+public class CharacterSheet {
 
 	private int id;
 	private String characterName;
