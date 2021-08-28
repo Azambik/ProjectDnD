@@ -1,59 +1,101 @@
 <div class="description-panel">
     <div class="row">
-        <div class="col-3">
+        <div class="col-2">
             <label class="text-light"for="characterName">Character name</label>
         </div>
-        <div class="col-3">
+        <div class="col-2">
             <label class="text-light"for="classlevel">Class & Level</label>
         </div>
-        <div class="col-3">
+        <div class="col-2">
             <label class="text-light"for="background">Background</label>
         </div>
-        <div class="col-3">
+        <div class="col-2">
             <label class="text-light"for="playerName">Player Name</label>
+        </div>
+        <div class="col-2">
+            <label class="text-light"for="faction">Faction</label>
+        </div>
+        <div class="col-2">
+            <label class="text-light"for="race">Race</label>
         </div>
     </div>
     <div class="row">
-        <div class=" col-3">
+        <div class=" col-2">
             <input type="text" id="characterName" name="characterName">
         </div>
-        <div class=" col-3">
+        <div class=" col-2">
             <input type="text" id="classlevel" name="classLevel" (ngModelChange)="classLevel = $event; updateClassLevel($event)" [ngModel]=classLevel>
         </div>
-        <div class="col-3">
+        <div class="col-2">
             <input type="text" id="background" name="background" (ngModelChange)="background = $event; updateBackground($event)" [ngModel]="background">
         </div>
-        <div class="col-3">
+        <div class="col-2">
                                                                   <!--out-->                                                      <!--in-->
             <input type="text" id="playerName" name="playerName" (ngModelChange)="playerName = $event; updatePlayerName($event)" [ngModel]="playerName">
         </div>
-    </div>
-    <div class="row">
-        <div class="col-3">
-            <label class="text-light"for="faction">Faction</label>
-        </div>
-        <div class="col-3">
-            <label class="text-light"for="race">Race</label>
-        </div>
-        <div class="col-3">
-            <label class="text-light"for="alignment">Alignment</label>
-        </div>
-        <div class="col-3">
-            <label class="text-light"for="exp">Experience Points</label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-3">
+        <div class="col-2">
             <input type="text" id="faction" name="faction" (ngModelChange)="faction = $event; updateFaction($event)" [ngModel]="faction">
         </div>
-        <div class="col-3">
+        <div class="col-2">
             <input type="text" is="race" name="race" (ngModelChange)="race = $event; updateRace($event)" [ngModel]="race" >
         </div>
-        <div class="col-3">
+        
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <label class="text-light"for="alignment">Alignment</label>
+        </div>
+        <div class="col-2">
+            <label class="text-light"for="exp">EXP</label>
+        </div>
+        <div class="col-2">
+            <label class="text-light"for="age">Age</label>
+        </div>
+        <div class="col-2">
+            <label class="text-light"for="height">Height</label>
+        </div>
+        <div class="col-2">
+            <label class="text-light"for="weight">Weight</label>
+        </div>
+        <div class="col-2">
+            <label class="text-light"for="eyes">Eyes</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
             <input type="text" id="alignment" name="alignment" (ngModelChange)="alignment = $event; updateAlignment($event)" [ngModel]="alignment">  
         </div>
-        <div class="col-3">
+        <div class="col-2">
             <input type="number" id="exp" name="exp" (ngModelChange)="exp = $event; updateExp($event)" [ngModel]="exp">
         </div>
+        <div class="col-2">
+            <input type="number" id="age" name="age" >
+        </div>
+        <div class="col-2">
+            <input type="number" id="height" name="height" >
+        </div>
+        <div class="col-2">
+            <input type="number" id="weight" name="weight" >
+        </div>
+        <div class="col-2">
+            <input type="number" id="eyes" name="eyes" >
+        </div>
     </div> 
+    <div class="row">
+        <div class="col-2">
+            <label class="text-light"for="skin">Skin</label>
+        </div>
+        <div class="col-2">
+            <label class="text-light"for="hair">Hair</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <input type="number" id="skin" name="skin" >
+        </div>
+        <div class="col-2">
+            <input type="text" id="hair" name="hair">  
+        </div>
+    
+    </div>
 </div>

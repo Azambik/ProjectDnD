@@ -8,13 +8,20 @@ export class CharacterSheetService {
 
   characterSheet: CharacterSheet = {
     descriptionPanel: {
+      characterName: '',
       classLevel: '',
       background: '',
       playerName: '',
       faction: '',
       race: '',
       alignment: '',
-      exp: 0
+      exp: 0,
+      age: 0,
+      height: 0,
+      weight:  '',
+      eyes:  '',
+      skin:  '',
+      hair:  ''
     },
     statPanel: {
       strength: 0,
@@ -75,7 +82,45 @@ export class CharacterSheetService {
       religionTick: false,
       slightOfHandTick: false,
       stealthTick: false
-    }
+    },
+    combatPanel: {
+      armorClass: 0,
+      initiative: 0,
+      speed: 0,
+      hitPointMaximum: 0,
+      currentHitPoints: 0,
+      temporaryHitPoint: 0,
+      hitDie: ''
+    },
+    attackPanel: {
+      attackOne: '',
+      attackBonusOne: '',
+      attackTypeOne: '',
+      attackTwo: '',
+      attackBonusTwo: '',
+      attackTypeTwo: '',
+      attackThree: '',
+      attackBonusThree: '',
+      attackTypeThree: '',
+      attackFour: '',
+      attackBonusFour: '',
+      attackTypeFour: '',
+      attackDescription: ''
+    },
+    personalityPanel: {
+      personalityTraits: '',
+      ideals: '',
+      bonds: '',
+      flaws: '',
+    },
+    equipmentPanel: {
+      equipment: '',
+      copperPoints: 0,
+      silverPoints: 0,
+      electrumPoints: 0,
+      goldPoints: 0,
+      platinumPoints:0
+  }
   };
 
   constructor() { }
