@@ -1,26 +1,22 @@
 <p class="text-light">Equipment</p>
-<textarea  name="equipment" rows="10" cols="50"></textarea>
+<textarea  name="equipment" rows="10" cols="50" [ngModel]="equipment" (ngModelChange)="equipment = $event; updateEquipment($event)"></textarea>
 <div name="copper">
-    <input type="number" name="copperPoints" style="width: 17%">
-    <label class="text-light" for="copperPoints">CP</label>
-</div>
-<div name="copper">
-    <input type="number" name="copperPoints" style="width: 17%">
+    <input type="number" name="copperPoints" style="width: 17%" [ngModel]="copperPoints" (ngModelChange)="copperPoints = $event; updateCopperPoints($event)">
     <label class="text-light" for="copperPoints">CP</label>
 </div>
 <div name="silver">
-    <input type="number" name="silverPoints" style="width: 17%">
+    <input type="number" name="silverPoints" style="width: 17%"[ngModel]="silverPoints" (ngModelChange)="silverPoints = $event; updateSilverPoints($event)">
     <label class="text-light" for="silverPoints">SP</label>
 </div>
 <div name="electrum">
-    <input type="number" name="electrumPoints" style="width: 17%">
+    <input type="number" name="electrumPoints" style="width: 17%" [ngModel]="electrumPoints" (ngModelChange)="electrumPoints = $event; updateElectrumPoints($event)">
     <label class="text-light" for="electrumPoints">EP</label>
 </div>
 <div name="gold">
-    <input type="number" name="goldPoints" style="width: 17%">
+    <input type="number" name="goldPoints" style="width: 17%" [ngModel]="goldPoints" (ngModelChange)="goldPoints = $event; updateGoldPoints($event)">
     <label class="text-light" for="goldPoints">GP</label>
 </div>
 <div name="platinum">
-    <input type="number" name="platinumPoints" style="width: 17%">
+    <input type="number" name="platinumPoints" style="width: 17%" [ngModel]="platinumPoints" (ngModelChange)="platinumPoints = $event; updatePlatinumPoints($event)">
     <label class="text-light" for="platinumPoints">PP</label>
 </div>

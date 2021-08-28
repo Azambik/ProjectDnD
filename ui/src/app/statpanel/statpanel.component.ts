@@ -8,17 +8,17 @@ import {CharacterSheetService} from '../../charactersheet.service';
 })
 export class statPanelComponent implements OnInit {
   strength: number = 0;
-  dexterity: number =0;
-  constitution: number =0;
-  intelligence: number =0;
-  wisdom: number =0;
-  charisma: number =0;
+  dexterity: number = 0;
+  constitution: number = 0;
+  intelligence: number = 0;
+  wisdom: number = 0;
+  charisma: number = 0;
   strengthModifier: number = 0;
-  dexterityModifier: number =0;
-  constitutionModifier: number =0;
-  intelligenceModifier: number =0;
-  wisdomModifier: number =0;
-  charismaModifier: number =0;
+  dexterityModifier: number = 0;
+  constitutionModifier: number = 0;
+  intelligenceModifier: number = 0;
+  wisdomModifier: number = 0;
+  charismaModifier: number = 0;
   constructor(private charactersheetService:CharacterSheetService) { }
 
   
@@ -332,11 +332,11 @@ export class statPanelComponent implements OnInit {
 
   ngOnInit() {
 	this.strength = this.charactersheetService.characterSheet.statPanel.strength;
-	this.strength = this.charactersheetService.characterSheet.statPanel.dexterity;
-	this.strength = this.charactersheetService.characterSheet.statPanel.constitution;
-	this.strength = this.charactersheetService.characterSheet.statPanel.intelligence;
-	this.strength = this.charactersheetService.characterSheet.statPanel.wisdom;
-	this.strength = this.charactersheetService.characterSheet.statPanel.charisma;
+	this.dexterity = this.charactersheetService.characterSheet.statPanel.dexterity;
+	this.constitution = this.charactersheetService.characterSheet.statPanel.constitution;
+	this.intelligence = this.charactersheetService.characterSheet.statPanel.intelligence;
+	this.wisdom = this.charactersheetService.characterSheet.statPanel.wisdom;
+	this.charisma = this.charactersheetService.characterSheet.statPanel.charisma;
   }
 
 }
