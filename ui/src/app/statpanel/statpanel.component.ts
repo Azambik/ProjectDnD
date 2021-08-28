@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {CharactersheetService} from '../../charactersheet.service';
+import {CharacterSheetService} from '../../charactersheet.service';
 
 @Component({
-  selector: 'app-statpanel',
-  templateUrl: './statpanel.component.html',
-  styleUrls: ['./statpanel.component.scss']
+  selector: 'app-statPanel',
+  templateUrl: './statPanel.component.html',
+  styleUrls: ['./statPanel.component.scss']
 })
-export class StatpanelComponent implements OnInit {
+export class statPanelComponent implements OnInit {
   strength: number = 0;
   dexterity: number =0;
   constitution: number =0;
@@ -19,7 +19,7 @@ export class StatpanelComponent implements OnInit {
   intelligenceModifier: number =0;
   wisdomModifier: number =0;
   charismaModifier: number =0;
-  constructor(private charactersheetService:CharactersheetService) { }
+  constructor(private charactersheetService:CharacterSheetService) { }
 
   
   strModifierCalc(strength: number): void {

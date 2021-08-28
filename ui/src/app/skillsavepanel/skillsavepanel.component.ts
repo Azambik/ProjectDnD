@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {CharactersheetService} from '../../charactersheet.service';
+import {CharacterSheetService} from '../../charactersheet.service';
 
 @Component({
-  selector: 'app-skillsavepanel',
-  templateUrl: './skillsavepanel.component.html',
-  styleUrls: ['./skillsavepanel.component.scss']
+  selector: 'app-skillSavePanel',
+  templateUrl: './skillSavePanel.component.html',
+  styleUrls: ['./skillSavePanel.component.scss']
 })
-export class SkillsavepanelComponent implements OnInit {
+export class skillSavePanelComponent implements OnInit {
     inspiration: number = 0;
     proficiencyBonus: number = 0;
     strengthSave: number = 0;
@@ -15,7 +15,13 @@ export class SkillsavepanelComponent implements OnInit {
     intelligenceSave: number = 0;
     wisdomSave: number = 0;
     charismaSave: number = 0;
-    constructor(private charactersheetService:CharactersheetService) { }
+    strengthTick: boolean = false;
+    dexterityTick: boolean = false;
+    constitutionTick: boolean = false;
+    intelligenceTick: boolean = false;
+    wisdomTick: boolean = false;
+    charismaTick: boolean = false;
+    constructor(private charactersheetService:CharacterSheetService) { }
   
   ngOnInit() {
     this.inspiration = this.charactersheetService.characterSheet.skillSavePanel.inspiration;
@@ -26,29 +32,53 @@ export class SkillsavepanelComponent implements OnInit {
     this.intelligenceSave = this.charactersheetService.characterSheet.skillSavePanel.intelligenceSave;
     this.wisdomSave = this.charactersheetService.characterSheet.skillSavePanel.wisdomSave;
     this.charismaSave = this.charactersheetService.characterSheet.skillSavePanel.charismaSave;
+    this.strengthTick = this.charactersheetService.characterSheet.skillSavePanel.strengthTick;
+    this.dexterityTick = this.charactersheetService.characterSheet.skillSavePanel.dexterityTick;
+    this.constitutionTick = this.charactersheetService.characterSheet.skillSavePanel.constitutionTick;
+    this.intelligenceTick = this.charactersheetService.characterSheet.skillSavePanel.intelligenceTick;
+    this.wisdomTick = this.charactersheetService.characterSheet.skillSavePanel.wisdomTick;
+    this.charismaTick = this.charactersheetService.characterSheet.skillSavePanel.charismaTick;
   }
-  updateInsperation(val: number): void {
+  updateInspiration(val: number): void {
     this.charactersheetService.characterSheet.skillSavePanel.inspiration = val;
   }
-  updateproficiencyBonus(val: number): void {
+  updateProficiencyBonus(val: number): void {
     this.charactersheetService.characterSheet.skillSavePanel.proficiencyBonus = val;
   }
-  updatestrengthSave(val: number): void {
+  updateStrengthSave(val: number): void {
     this.charactersheetService.characterSheet.skillSavePanel.strengthSave = val;
   }
-  updatedexteritySave(val: number): void {
+  updateStrengthTick(val: boolean): void {
+    this.charactersheetService.characterSheet.skillSavePanel.strengthTick = val;
+  }
+  updateDexteritySave(val: number): void {
     this.charactersheetService.characterSheet.skillSavePanel.dexteritySave = val;
   }
-  updateconstitutionSave(val: number): void {
+  updateDexterityTick(val: boolean): void {
+    this.charactersheetService.characterSheet.skillSavePanel.dexterityTick = val;
+  }
+  updateConstitutionSave(val: number): void {
     this.charactersheetService.characterSheet.skillSavePanel.constitutionSave = val;
   }
-  updateintelligenceSave(val: number): void {
+  updateConstitutionTick(val: boolean): void {
+    this.charactersheetService.characterSheet.skillSavePanel.constitutionTick = val;
+  }
+  updateIntelligenceSave(val: number): void {
     this.charactersheetService.characterSheet.skillSavePanel.intelligenceSave = val;
   }
-  updatewisdomSave(val: number): void {
+  updateIntelligenceTick(val: boolean): void {
+    this.charactersheetService.characterSheet.skillSavePanel.intelligenceTick = val;
+  }
+  updateWisdomSave(val: number): void {
     this.charactersheetService.characterSheet.skillSavePanel.wisdomSave = val;
   }
-  updatecharismaSave(val: number): void {
+  updateWisdomTick(val: boolean): void {
+    this.charactersheetService.characterSheet.skillSavePanel.wisdomTick = val;
+  }
+  updateCharismaSave(val: number): void {
     this.charactersheetService.characterSheet.skillSavePanel.charismaSave = val;
+  }
+  updateCharismaTick(val: boolean): void {
+    this.charactersheetService.characterSheet.skillSavePanel.charismaTick = val;
   }
 }

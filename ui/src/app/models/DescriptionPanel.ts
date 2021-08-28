@@ -1,7 +1,7 @@
 export interface DescriptionPanel {
-    classlevel: string;
+    classLevel: string;
     background: string;
-    playername: string;
+    playerName: string;
     faction: string;
     race: string;
     alignment: string;

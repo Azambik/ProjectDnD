@@ -1,0 +1,36 @@
+export interface SkillPanel {
+    acrobatics: number;
+    animalHandling: number;
+    arcana: number;
+    athletics: number;
+    deception: number;
+    history: number;
+    insight: number;
+    intimidation: number;
+    investigation: number;
+    medicine: number;
+    nature: number;
+    perception: number;
+    performance: number;
+    persuasion: number;
+    religion: number;
+    slightOfHand: number;
+    stealth: number;
+    acrobaticsTick: boolean;
+    animalHandlingTick: boolean;
+    arcanaTick: boolean;
+    athleticsTick: boolean;
+    deceptionTick: boolean;
+    historyTick: boolean;
+    insightTick: boolean;
+    intimidationTick: boolean;
+    investigationTick: boolean;
+    medicineTick: boolean;
+    natureTick: boolean;
+    perceptionTick: boolean;
+    performanceTick: boolean;
+    persuasionTick: boolean;
+    religionTick: boolean;
+    slightOfHandTick: boolean;
+    stealthTick: boolean;
+}

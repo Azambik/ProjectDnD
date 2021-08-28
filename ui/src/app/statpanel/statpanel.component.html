@@ -1,9 +1,9 @@
-<div class="stat-panel float-left ">
+<div class="stat-panel">
     <div class="row">
         <div class=" col-4 ">
             <label class="text-light" for="str">Strength</label>
             <br>
-            <input type="number" name="str" [ngModel]="strength" (ngModelChange)="strength = $event; strModifierCalc($event)">
+            <input type="number" name="str" [ngModel]="strength" (ngModelChange)="strength = $event; strModifierCalc($event)" >
             <br>
             <label class="text-light" for="str-mod">modifier</label>
             <br>
