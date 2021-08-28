@@ -14,6 +14,7 @@ repositories {
 }
 
 dependencies {
+	implementation 'de.mkammerer:argon2-jvm:2.10.1'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -21,4 +22,8 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.postgresql:postgresql'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+}
+
+bootRun {
+  jvmArgs=["-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000"]
 }
