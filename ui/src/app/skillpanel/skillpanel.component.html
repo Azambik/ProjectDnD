@@ -1,12 +1,12 @@
 <div class="skillpanel ">
     <div name="acrobatics">
-      <input type="checkbox" name="acrobatics"> 
-      <input type="number" name="acrobaticsBonus">
+      <input type="checkbox" name="acrobaticsTick" [ngModel]="acrobaticsTick" (ngModelChange)="acrobaticsTick = $event; updateAcrobaticsTick($event)"> 
+      <input type="number" name="acrobaticsBonus" [ngModel]="acrobatics" (ngModelChange)="acrobatics = $event; updateAcrobatics($event)">
       <label class="text-light" for="acrobatics">Acrobatics (dex)</label>
     </div>
     <div name="animal-handling">
-        <input type="checkbox" name="animal-handling"> 
-        <input type="number" name="animal-handling-bonus">
+        <input type="checkbox" name="animalHandlingTick" [ngModel]="animalHandlingTick" (ngModelChange)="animalHandlingTick = $event; updateAnimalHandlingTick($event)"> 
+        <input type="number" name="animalHandlingBonus" [ngModel]="animalHandling" (ngModelChange)="animalHandling = $event; updateAnimalHandling($event)">
         <label class="text-light" for="animal-handling">Animal handling (wis)</label>
       </div>
     <div name="arcana">

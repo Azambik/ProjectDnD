@@ -42,6 +42,110 @@ export class skillPanelComponent implements OnInit {
     slightOfHandTick: boolean = false;
     stealthTick: boolean = false;
   constructor(private characterSheetService:CharacterSheetService) { }
+  
+  updateAcrobatics(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.acrobatics = val
+  }
+  updateAnimalHandling(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.animalHandling = val
+  }
+  updateArcana(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.arcana = val
+  }
+  updateAthletics(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.athletics = val
+  }
+  updateDeception(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.deception = val
+  }
+  updateHistory(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.history = val
+  }
+  updateInsight(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.insight = val
+  }
+  updateIntimidation(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.intimidation = val
+  }
+  updateInvestigation(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.investigation = val
+  }
+  updateMedicine(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.medicine = val
+  }
+  updateNature(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.nature = val
+  }
+  updatePerception(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.perception = val
+  }
+  updatePerformance(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.performance = val
+  }
+  updatePersuasion(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.persuasion = val
+  }
+  updateReligion(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.religion = val
+  }
+  updateSlightOfHand(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.slightOfHand = val
+  }
+  updateStealth(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.stealth = val
+  }
+
+  updateAcrobaticsTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.acrobaticsTick = val
+  }
+  updateAnimalHandlingTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.animalHandlingTick = val
+  }
+  updateArcanaTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.arcanaTick = val
+  }
+  updateAthleticsTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.athleticsTick = val
+  }
+  updateDeceptionTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.deceptionTick = val
+  }
+  updateHistoryTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.historyTick = val
+  }
+  updateInsightTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.insightTick = val
+  }
+  updateIntimidationTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.intimidationTick = val
+  }
+  updateInvestigationTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.investigationTick = val
+  }
+  updateMedicineTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.medicineTick = val
+  }
+  updateNatureTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.natureTick = val
+  }
+  updatePerceptionTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.perceptionTick = val
+  }
+  updatePerformanceTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.performanceTick = val
+  }
+  updatePersuasionTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.persuasionTick = val
+  }
+  updateReligionTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.religionTick = val
+  }
+  updateSlightOfHandTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.slightOfHandTick = val
+  }
+  updateStealthTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.stealthTick = val
+  }
 
   ngOnInit(): void {
     this.acrobatics = this.characterSheetService.characterSheet.skillPanel.acrobatics;
