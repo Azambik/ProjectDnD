@@ -65,6 +65,7 @@ export class CharacterSheetService {
       religion: 0,
       slightOfHand: 0,
       stealth: 0,
+      survival: 0,
       acrobaticsTick: false,
       animalHandlingTick: false,
       arcanaTick: false,
@@ -81,7 +82,8 @@ export class CharacterSheetService {
       persuasionTick: false,
       religionTick: false,
       slightOfHandTick: false,
-      stealthTick: false
+      stealthTick: false,
+      survivalTick: false
     },
     combatPanel: {
       armorClass: 0,

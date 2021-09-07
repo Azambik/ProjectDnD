@@ -24,6 +24,7 @@ export class skillPanelComponent implements OnInit {
     religion: number = 0;
     slightOfHand: number = 0;
     stealth: number = 0;
+    survival: number = 0;
     acrobaticsTick: boolean = false;
     animalHandlingTick: boolean = false;
     arcanaTick: boolean = false;
@@ -41,6 +42,7 @@ export class skillPanelComponent implements OnInit {
     religionTick: boolean = false;
     slightOfHandTick: boolean = false;
     stealthTick: boolean = false;
+    survivalTick: boolean = false;
   constructor(private characterSheetService:CharacterSheetService) { }
   
   updateAcrobatics(val : number): void {
@@ -94,7 +96,9 @@ export class skillPanelComponent implements OnInit {
   updateStealth(val : number): void {
     this.characterSheetService.characterSheet.skillPanel.stealth = val
   }
-
+  updateSurvival(val : number): void {
+    this.characterSheetService.characterSheet.skillPanel.survival = val
+  }
   updateAcrobaticsTick(val : boolean): void {
     this.characterSheetService.characterSheet.skillPanel.acrobaticsTick = val
   }
@@ -146,6 +150,9 @@ export class skillPanelComponent implements OnInit {
   updateStealthTick(val : boolean): void {
     this.characterSheetService.characterSheet.skillPanel.stealthTick = val
   }
+  updateSurvivalTick(val : boolean): void {
+    this.characterSheetService.characterSheet.skillPanel.survivalTick = val
+  }
 
   ngOnInit(): void {
     this.acrobatics = this.characterSheetService.characterSheet.skillPanel.acrobatics;
@@ -165,6 +172,7 @@ export class skillPanelComponent implements OnInit {
     this.religion = this.characterSheetService.characterSheet.skillPanel.religion;
     this.slightOfHand = this.characterSheetService.characterSheet.skillPanel.slightOfHand;
     this.stealth = this.characterSheetService.characterSheet.skillPanel.stealth;
+    this.survival = this.characterSheetService.characterSheet.skillPanel.survival;
     this.acrobaticsTick = this.characterSheetService.characterSheet.skillPanel.acrobaticsTick;
     this.animalHandlingTick = this.characterSheetService.characterSheet.skillPanel.animalHandlingTick;
     this.arcanaTick = this.characterSheetService.characterSheet.skillPanel.arcanaTick;
@@ -182,6 +190,7 @@ export class skillPanelComponent implements OnInit {
     this.religionTick = this.characterSheetService.characterSheet.skillPanel.religionTick;
     this.slightOfHandTick = this.characterSheetService.characterSheet.skillPanel.slightOfHandTick;
     this.stealthTick = this.characterSheetService.characterSheet.skillPanel.stealthTick;
+    this.survivalTick = this.characterSheetService.characterSheet.skillPanel.survivalTick;
   }
 
 }

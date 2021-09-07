@@ -16,6 +16,7 @@ export interface SkillPanel {
     religion: number;
     slightOfHand: number;
     stealth: number;
+    survival: number;
     acrobaticsTick: boolean;
     animalHandlingTick: boolean;
     arcanaTick: boolean;
@@ -33,4 +34,5 @@ export interface SkillPanel {
     religionTick: boolean;
     slightOfHandTick: boolean;
     stealthTick: boolean;
+    survivalTick: boolean;
 }
