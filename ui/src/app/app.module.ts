@@ -18,6 +18,7 @@ import { PersonalityPanelComponent } from './personality-panel/personality-panel
 import { AttackPanelComponent } from './attack-panel/attack-panel.component';
 import { EquipmentPanelComponent } from './equipment-panel/equipment-panel.component';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
+import { SpellPanelComponent } from './spell-panel/spell-panel.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CharacterDetailsComponent } from './character-details/character-details
     AttackPanelComponent,
     EquipmentPanelComponent,
     CharacterDetailsComponent,
+    SpellPanelComponent,
   ],
   imports: [
     BrowserModule,
