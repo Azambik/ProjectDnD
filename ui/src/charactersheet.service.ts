@@ -122,7 +122,14 @@ export class CharacterSheetService {
       electrumPoints: 0,
       goldPoints: 0,
       platinumPoints:0
-  }
+    },
+    characterDetailsPanel: {
+      darkGift: '',
+    additionalFeaturesAndTraits: '',
+    characterBackStory: '',
+    alliesAndOrganizations: '',
+    treasure:  '',
+    }
   };
 
   constructor() { }

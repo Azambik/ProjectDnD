@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-6">
-        <textarea  name="darkGift" rows="10" cols="100"></textarea>
+        <textarea  name="darkGift" rows="10" cols="100" [ngModel]="darkGift" (ngModelChange)="darkGift = $event; updateDarkGift($event)"></textarea>
     </div>
     <div class="col-6">
-        <textarea  name="additionalFeaturesAndTraits" rows="10" cols="100"></textarea>
+        <textarea  name="additionalFeaturesAndTraits" rows="10" cols="100" [ngModel]="additionalFeaturesAndTraits" (ngModelChange)="additionalFeaturesAndTraits = $event; updateAdditionalFeaturesAndTraits($event)"></textarea>
     </div>
 </div>
 <div class="row">
@@ -17,10 +17,10 @@
 
 <div class="row">
     <div class="col-6">
-        <textarea  name="characterBackstory" rows="10" cols="100"></textarea>
+        <textarea  name="characterBackstory" rows="10" cols="100" [ngModel]="characterBackStory" (ngModelChange)="characterBackStory = $event; updateCharacterBackStory($event)"></textarea>
     </div>
     <div class="col-6">
-        <textarea  name="alliesAndOrganizations" rows="10" cols="100"></textarea>
+        <textarea  name="alliesAndOrganizations" rows="10" cols="100" [ngModel]="alliesAndOrganizations" (ngModelChange)="alliesAndOrganizations = $event; updateAlliesAndOrganizations($event)"></textarea>
     </div>
 </div>
 <div class="row">
@@ -33,7 +33,7 @@
 </div>
 <div class="row">
     <div class="col-6">
-        <textarea  name="treasure" rows="10" cols="100"></textarea>
+        <textarea  name="treasure" rows="10" cols="100" [ngModel]="treasure" (ngModelChange)="treasure = $event; updateTreasure($event)"></textarea > 
     </div>
 </div>
 <div class="row">
@@ -41,11 +41,11 @@
         <label class="text-light" for="treasure">Treasure</label>
    </div>
    <div class="col-4">
-    <img src="../../assets/Olidammara.jpg" alt="Italian Trulli">
+    <img src="../../assets/Olidammara.jpg" alt="Olidammara">
     <label class="text-light" for="organizations">Organization symbol</label>
    </div>
    <div class="col-4">
-    <img src="../../assets/Olidammara.jpg" alt="Italian Trulli">
+    <img src="../../assets/Olidammara.jpg" alt="Olidammara">
     <label class="text-light" for="characterImage">Character image</label>
    </div>
 </div>
