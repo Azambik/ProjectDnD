@@ -7,6 +7,7 @@ import { AttackPanel } from "./AttackPanel";
 import { PersonalityPanel } from "./PersonalityPanel";
 import { EquipmentPanel } from "./EquipmentPanel";
 import { CharacterDetailsPanel } from "./character-details";
+import { SpellPanel } from "./spell-pannel";
 
 export interface CharacterSheet {
     descriptionPanel: DescriptionPanel;
@@ -18,4 +19,5 @@ export interface CharacterSheet {
     personalityPanel: PersonalityPanel;
     equipmentPanel: EquipmentPanel;
     characterDetailsPanel: CharacterDetailsPanel;
+    spellPanel: SpellPanel;
 }
