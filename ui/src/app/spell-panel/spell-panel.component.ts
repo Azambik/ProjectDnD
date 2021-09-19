@@ -16,7 +16,7 @@ export class SpellPanelComponent implements OnInit {
    cantripOne: string = '';
    cantripTwo: string = '';
    cantripThree: string = '';
-   cantripFore: string = '';
+   cantripFour: string = '';
    cantripFive: string = '';
    cantripSix: string = '';
    cantripSeven: string = '';
@@ -286,7 +286,7 @@ export class SpellPanelComponent implements OnInit {
    this.cantripOne = this.characterSheetService.characterSheet.spellPanel.cantripOne;
    this.cantripTwo = this.characterSheetService.characterSheet.spellPanel.cantripTwo;
    this.cantripThree = this.characterSheetService.characterSheet.spellPanel.cantripThree;
-   this.cantripFore = this.characterSheetService.characterSheet.spellPanel.cantripFore;
+   this.cantripFour = this.characterSheetService.characterSheet.spellPanel.cantripFour;
    this.cantripFive = this.characterSheetService.characterSheet.spellPanel.cantripFive;
    this.cantripSix = this.characterSheetService.characterSheet.spellPanel.cantripSix;
    this.cantripSeven = this.characterSheetService.characterSheet.spellPanel.cantripSeven;
@@ -544,6 +544,765 @@ export class SpellPanelComponent implements OnInit {
    this.l9Slot11Tick = this.characterSheetService.characterSheet.spellPanel.l9Slot11Tick;
    this.l9Slot12Tick = this.characterSheetService.characterSheet.spellPanel.l9Slot12Tick;
   }
+  //header
+  updateSpellCastingClass(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.spellCastingClass = val;
+  }
+  updateSpellCastingAbility(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.spellCastingAbility = val;
+  }
 
+  updateSpellSaveDC(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.spellSaveDC = val;
+  }
+  updateSpellAttackBonus(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.spellAttackBonus = val;
+  }
+  //cantrips
+  updateCantripOne(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.cantripOne = val;
+  }
+  updateCantripTwo(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.cantripTwo = val;
+  }
 
+  updateCantripThree(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.cantripThree = val;
+  }
+
+  updateCantripFour(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.cantripFour = val;
+  }
+
+  updateCantripFive(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.cantripFive = val;
+  }
+
+  updateCantripSix(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.cantripSix = val;
+  }
+
+  updateCantripSeven(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.cantripSeven = val;
+  }
+
+  updateCantripEight(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.cantripEight = val;
+  }
+   //level one spells
+   updateL1SpellSlotTotal(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1SpellSlotTotal = val;
+  }
+  updateL1SpellSlotExpended(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1SpellSlotExpended = val;
+  }
+  updateL1Slot1(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot1 = val;
+  }
+  updateL1Slot2(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot2 = val;
+  }
+  updateL1Slot3(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot3 = val;
+  }
+  updateL1Slot4(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot4 = val;
+  }
+  updateL1Slot5(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot5 = val;
+  }
+  updateL1Slot6(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot6 = val;
+  }
+  updateL1Slot7(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot7 = val;
+  }
+  updateL1Slot8(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot8 = val;
+  }
+  updateL1Slot9(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot9 = val;
+  }
+  updateL1Slot10(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot10 = val;
+  }
+  updateL1Slot11(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot11 = val;
+  }
+  updateL1Slot12(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot12 = val;
+  }
+  updateL1Slot1Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot1Tick = val;
+  }
+  updateL1Slot2Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot2Tick = val;
+  }
+  updateL1Slot3Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot3Tick = val;
+  }
+  updateL1Slot4Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot4Tick = val;
+  }
+  updateL1Slot5Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot5Tick = val;
+  }
+  updateL1Slot6Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot6Tick = val;
+  }
+  updateL1Slot7Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot7Tick = val;
+  }
+  updateL1Slot8Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot8Tick = val;
+  }
+  updateL1Slot9Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot9Tick = val;
+  }
+  updateL1Slot10Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot10Tick = val;
+  }
+  updateL1Slot11Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot11Tick = val;
+  }
+  updateL1Slot12Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l1Slot12Tick = val;
+  }
+
+  //level two spells
+  updateL2SpellSlotTotal(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2SpellSlotTotal = val;
+  }
+  updateL2SpellSlotExpended(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2SpellSlotExpended = val;
+  }
+  updateL2Slot1(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot1 = val;
+  }
+  updateL2Slot2(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot2 = val;
+  }
+  updateL2Slot3(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot3 = val;
+  }
+  updateL2Slot4(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot4 = val;
+  }
+  updateL2Slot5(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot5 = val;
+  }
+  updateL2Slot6(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot6 = val;
+  }
+  updateL2Slot7(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot7 = val;
+  }
+  updateL2Slot8(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot8 = val;
+  }
+  updateL2Slot9(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot9 = val;
+  }
+  updateL2Slot10(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot10 = val;
+  }
+  updateL2Slot11(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot11 = val;
+  }
+  updateL2Slot12(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot12 = val;
+  }
+  updateL2Slot1Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot1Tick = val;
+  }
+  updateL2Slot2Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot2Tick = val;
+  }
+  updateL2Slot3Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot3Tick = val;
+  }
+  updateL2Slot4Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot4Tick = val;
+  }
+  updateL2Slot5Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot5Tick = val;
+  }
+  updateL2Slot6Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot6Tick = val;
+  }
+  updateL2Slot7Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot7Tick = val;
+  }
+  updateL2Slot8Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot8Tick = val;
+  }
+  updateL2Slot9Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot9Tick = val;
+  }
+  updateL2Slot10Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot10Tick = val;
+  }
+  updateL2Slot11Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot11Tick = val;
+  }
+  updateL2Slot12Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l2Slot12Tick = val;
+  }
+  //level three spells
+  updateL3SpellSlotTotal(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3SpellSlotTotal = val;
+  }
+  updateL3SpellSlotExpended(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3SpellSlotExpended = val;
+  }
+  updateL3Slot1(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot1 = val;
+  }
+  updateL3Slot2(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot2 = val;
+  }
+  updateL3Slot3(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot3 = val;
+  }
+  updateL3Slot4(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot4 = val;
+  }
+  updateL3Slot5(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot5 = val;
+  }
+  updateL3Slot6(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot6 = val;
+  }
+  updateL3Slot7(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot7 = val;
+  }
+  updateL3Slot8(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot8 = val;
+  }
+  updateL3Slot9(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot9 = val;
+  }
+  updateL3Slot10(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot10 = val;
+  }
+  updateL3Slot11(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot11 = val;
+  }
+  updateL3Slot12(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot12 = val;
+  }
+  updateL3Slot1Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot1Tick = val;
+  }
+  updateL3Slot2Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot2Tick = val;
+  }
+  updateL3Slot3Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot3Tick = val;
+  }
+  updateL3Slot4Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot4Tick = val;
+  }
+  updateL3Slot5Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot5Tick = val;
+  }
+  updateL3Slot6Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot6Tick = val;
+  }
+  updateL3Slot7Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot7Tick = val;
+  }
+  updateL3Slot8Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot8Tick = val;
+  }
+  updateL3Slot9Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot9Tick = val;
+  }
+  updateL3Slot10Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot10Tick = val;
+  }
+  updateL3Slot11Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot11Tick = val;
+  }
+  updateL3Slot12Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l3Slot12Tick = val;
+  }
+  //level four spells
+  updateL4SpellSlotTotal(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4SpellSlotTotal = val;
+  }
+  updateL4SpellSlotExpended(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4SpellSlotExpended = val;
+  }
+  updateL4Slot1(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot1 = val;
+  }
+  updateL4Slot2(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot2 = val;
+  }
+  updateL4Slot3(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot3 = val;
+  }
+  updateL4Slot4(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot4 = val;
+  }
+  updateL4Slot5(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot5 = val;
+  }
+  updateL4Slot6(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot6 = val;
+  }
+  updateL4Slot7(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot7 = val;
+  }
+  updateL4Slot8(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot8 = val;
+  }
+  updateL4Slot9(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot9 = val;
+  }
+  updateL4Slot10(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot10 = val;
+  }
+  updateL4Slot11(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot11 = val;
+  }
+  updateL4Slot12(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot12 = val;
+  }
+  updateL4Slot1Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot1Tick = val;
+  }
+  updateL4Slot2Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot2Tick = val;
+  }
+  updateL4Slot3Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot3Tick = val;
+  }
+  updateL4Slot4Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot4Tick = val;
+  }
+  updateL4Slot5Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot5Tick = val;
+  }
+  updateL4Slot6Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot6Tick = val;
+  }
+  updateL4Slot7Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot7Tick = val;
+  }
+  updateL4Slot8Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot8Tick = val;
+  }
+  updateL4Slot9Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot9Tick = val;
+  }
+  updateL4Slot10Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot10Tick = val;
+  }
+  updateL4Slot11Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot11Tick = val;
+  }
+  updateL4Slot12Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l4Slot12Tick = val;
+  }
+
+  //level Five spells
+  updateL5SpellSlotTotal(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5SpellSlotTotal = val;
+  }
+  updateL5SpellSlotExpended(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5SpellSlotExpended = val;
+  }
+  updateL5Slot1(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot1 = val;
+  }
+  updateL5Slot2(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot2 = val;
+  }
+  updateL5Slot3(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot3 = val;
+  }
+  updateL5Slot4(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot4 = val;
+  }
+  updateL5Slot5(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot5 = val;
+  }
+  updateL5Slot6(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot6 = val;
+  }
+  updateL5Slot7(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot7 = val;
+  }
+  updateL5Slot8(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot8 = val;
+  }
+  updateL5Slot9(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot9 = val;
+  }
+  updateL5Slot10(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot10 = val;
+  }
+  updateL5Slot11(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot11 = val;
+  }
+  updateL5Slot12(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot12 = val;
+  }
+  updateL5Slot1Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot1Tick = val;
+  }
+  updateL5Slot2Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot2Tick = val;
+  }
+  updateL5Slot3Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot3Tick = val;
+  }
+  updateL5Slot4Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot4Tick = val;
+  }
+  updateL5Slot5Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot5Tick = val;
+  }
+  updateL5Slot6Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot6Tick = val;
+  }
+  updateL5Slot7Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot7Tick = val;
+  }
+  updateL5Slot8Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot8Tick = val;
+  }
+  updateL5Slot9Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot9Tick = val;
+  }
+  updateL5Slot10Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot10Tick = val;
+  }
+  updateL5Slot11Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot11Tick = val;
+  }
+  updateL5Slot12Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l5Slot12Tick = val;
+  }
+
+  //level six spells
+  updateL6SpellSlotTotal(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6SpellSlotTotal = val;
+  }
+  updateL6SpellSlotExpended(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6SpellSlotExpended = val;
+  }
+  updateL6Slot1(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot1 = val;
+  }
+  updateL6Slot2(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot2 = val;
+  }
+  updateL6Slot3(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot3 = val;
+  }
+  updateL6Slot4(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot4 = val;
+  }
+  updateL6Slot5(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot5 = val;
+  }
+  updateL6Slot6(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot6 = val;
+  }
+  updateL6Slot7(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot7 = val;
+  }
+  updateL6Slot8(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot8 = val;
+  }
+  updateL6Slot9(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot9 = val;
+  }
+  updateL6Slot10(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot10 = val;
+  }
+  updateL6Slot11(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot11 = val;
+  }
+  updateL6Slot12(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot12 = val;
+  }
+  updateL6Slot1Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot1Tick = val;
+  }
+  updateL6Slot2Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot2Tick = val;
+  }
+  updateL6Slot3Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot3Tick = val;
+  }
+  updateL6Slot4Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot4Tick = val;
+  }
+  updateL6Slot5Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot5Tick = val;
+  }
+  updateL6Slot6Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot6Tick = val;
+  }
+  updateL6Slot7Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot7Tick = val;
+  }
+  updateL6Slot8Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot8Tick = val;
+  }
+  updateL6Slot9Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot9Tick = val;
+  }
+  updateL6Slot10Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot10Tick = val;
+  }
+  updateL6Slot11Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot11Tick = val;
+  }
+  updateL6Slot12Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l6Slot12Tick = val;
+  }
+  //level seven spells
+  updateL7SpellSlotTotal(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7SpellSlotTotal = val;
+  }
+  updateL7SpellSlotExpended(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7SpellSlotExpended = val;
+  }
+  updateL7Slot1(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot1 = val;
+  }
+  updateL7Slot2(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot2 = val;
+  }
+  updateL7Slot3(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot3 = val;
+  }
+  updateL7Slot4(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot4 = val;
+  }
+  updateL7Slot5(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot5 = val;
+  }
+  updateL7Slot6(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot6 = val;
+  }
+  updateL7Slot7(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot7 = val;
+  }
+  updateL7Slot8(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot8 = val;
+  }
+  updateL7Slot9(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot9 = val;
+  }
+  updateL7Slot10(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot10 = val;
+  }
+  updateL7Slot11(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot11 = val;
+  }
+  updateL7Slot12(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot12 = val;
+  }
+  updateL7Slot1Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot1Tick = val;
+  }
+  updateL7Slot2Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot2Tick = val;
+  }
+  updateL7Slot3Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot3Tick = val;
+  }
+  updateL7Slot4Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot4Tick = val;
+  }
+  updateL7Slot5Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot5Tick = val;
+  }
+  updateL7Slot6Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot6Tick = val;
+  }
+  updateL7Slot7Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot7Tick = val;
+  }
+  updateL7Slot8Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot8Tick = val;
+  }
+  updateL7Slot9Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot9Tick = val;
+  }
+  updateL7Slot10Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot10Tick = val;
+  }
+  updateL7Slot11Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot11Tick = val;
+  }
+  updateL7Slot12Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l7Slot12Tick = val;
+  }
+
+  //level eight spells
+  updateL8SpellSlotTotal(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8SpellSlotTotal = val;
+  }
+  updateL8SpellSlotExpended(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8SpellSlotExpended = val;
+  }
+  updateL8Slot1(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot1 = val;
+  }
+  updateL8Slot2(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot2 = val;
+  }
+  updateL8Slot3(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot3 = val;
+  }
+  updateL8Slot4(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot4 = val;
+  }
+  updateL8Slot5(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot5 = val;
+  }
+  updateL8Slot6(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot6 = val;
+  }
+  updateL8Slot7(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot7 = val;
+  }
+  updateL8Slot8(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot8 = val;
+  }
+  updateL8Slot9(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot9 = val;
+  }
+  updateL8Slot10(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot10 = val;
+  }
+  updateL8Slot11(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot11 = val;
+  }
+  updateL8Slot12(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot12 = val;
+  }
+  updateL8Slot1Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot1Tick = val;
+  }
+  updateL8Slot2Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot2Tick = val;
+  }
+  updateL8Slot3Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot3Tick = val;
+  }
+  updateL8Slot4Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot4Tick = val;
+  }
+  updateL8Slot5Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot5Tick = val;
+  }
+  updateL8Slot6Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot6Tick = val;
+  }
+  updateL8Slot7Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot7Tick = val;
+  }
+  updateL8Slot8Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot8Tick = val;
+  }
+  updateL8Slot9Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot9Tick = val;
+  }
+  updateL8Slot10Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot10Tick = val;
+  }
+  updateL8Slot11Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot11Tick = val;
+  }
+  updateL8Slot12Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l8Slot12Tick = val;
+  }
+
+  //level nine spells
+  updateL9SpellSlotTotal(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9SpellSlotTotal = val;
+  }
+  updateL9SpellSlotExpended(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9SpellSlotExpended = val;
+  }
+  updateL9Slot1(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot1 = val;
+  }
+  updateL9Slot2(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot2 = val;
+  }
+  updateL9Slot3(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot3 = val;
+  }
+  updateL9Slot4(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot4 = val;
+  }
+  updateL9Slot5(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot5 = val;
+  }
+  updateL9Slot6(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot6 = val;
+  }
+  updateL9Slot7(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot7 = val;
+  }
+  updateL9Slot8(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot8 = val;
+  }
+  updateL9Slot9(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot9 = val;
+  }
+  updateL9Slot10(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot10 = val;
+  }
+  updateL9Slot11(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot11 = val;
+  }
+  updateL9Slot12(val: string): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot12 = val;
+  }
+  updateL9Slot1Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot1Tick = val;
+  }
+  updateL9Slot2Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot2Tick = val;
+  }
+  updateL9Slot3Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot3Tick = val;
+  }
+  updateL9Slot4Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot4Tick = val;
+  }
+  updateL9Slot5Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot5Tick = val;
+  }
+  updateL9Slot6Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot6Tick = val;
+  }
+  updateL9Slot7Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot7Tick = val;
+  }
+  updateL9Slot8Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot8Tick = val;
+  }
+  updateL9Slot9Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot9Tick = val;
+  }
+  updateL9Slot10Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot10Tick = val;
+  }
+  updateL9Slot11Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot11Tick = val;
+  }
+  updateL9Slot12Tick(val: boolean): void {
+    this.characterSheetService.characterSheet.spellPanel.l9Slot12Tick = val;
+  }
 }

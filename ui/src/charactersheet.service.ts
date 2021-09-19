@@ -140,7 +140,7 @@ export class CharacterSheetService {
     cantripOne: '',
     cantripTwo: '',
     cantripThree: '',
-    cantripFore: '',
+    cantripFour: '',
     cantripFive: '',
     cantripSix: '',
     cantripSeven: '',

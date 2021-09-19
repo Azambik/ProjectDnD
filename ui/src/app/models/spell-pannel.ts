@@ -8,7 +8,7 @@ export interface SpellPanel {
     cantripOne: string;
     cantripTwo: string;
     cantripThree: string;
-    cantripFore: string;
+    cantripFour: string;
     cantripFive: string;
     cantripSix: string;
     cantripSeven: string;
