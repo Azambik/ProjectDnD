@@ -14,16 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import server.projectdnd.DatabaseLayers.Entities.UserEntity;
 import server.projectdnd.DatabaseLayers.Repositories.UserRepository;
-import server.projectdnd.dtos.Login;
+import server.projectdnd.dtos.LoginDTO;
 import server.projectdnd.dtos.Signup;
 import server.projectdnd.pojos.SaltHash;
 import server.projectdnd.utils.Encryptor;
 import server.projectdnd.utils.Utils;
 
 
-@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/user")
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
 	
 	private static final String FAKE_TOKEN = "FAKE";
@@ -32,7 +32,7 @@ public class UserController {
     private UserRepository userRepo;
     
     @PostMapping("/login")
-	public ResponseEntity<String> login(Login login) {
+	public ResponseEntity<String> login(@RequestBody LoginDTO login) {
 		
 		ResponseEntity<String> response = null;
 

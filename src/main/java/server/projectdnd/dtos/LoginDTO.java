@@ -2,7 +2,7 @@ package server.projectdnd.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Login {
+public class LoginDTO {
 
 	private String email;
 	private String username;

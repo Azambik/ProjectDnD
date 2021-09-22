@@ -25,8 +25,13 @@ export class LoginPageComponent {
   constructor(private httpClient: HttpClient) { }
 
   login(): void {
-    this.httpClient.post<any>
-    (this.loginUrl, {login: JSON.stringify(this.usersLogin)})
+    const login: Login = {
+      email: this.usersLogin.email,
+      username: this.usersLogin.username,
+      password: this.usersLogin.password
+    }
+
+    this.httpClient.post<any>(this.loginUrl, login)
     .toPromise().then((response: any) => {
       console.log(response);
     }).catch(err => console.log(err));
