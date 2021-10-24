@@ -1,36 +1,43 @@
 package server.projectdnd.Controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
+import server.projectdnd.DatabaseLayers.Entities.CharacterSheetEntity;
 import server.projectdnd.DatabaseLayers.Repositories.CharacterSheetRepository;
-import server.projectdnd.dtos.CharacterSheet;
+//import server.projectdnd.dtos.CharacterSheet;
 
 @RestController
 @RequestMapping("/character")
 @CrossOrigin(origins = "http://localhost:4200")
 public class CharacterSheetController {
 
-	@Autowired
-    private CharacterSheetRepository characterSheetRepo;
+    CharacterSheetRepository characterSheetRepository;
+
+    public CharacterSheetController(CharacterSheetRepository characterSheetRepository){
+        this.characterSheetRepository = characterSheetRepository;
+    }
+	//@Autowired
+   // private CharacterSheetRepository characterSheetRepo;
     //seting get request to send character sheet.
-    @GetMapping("/getCharacterSheet")
-    public CharacterSheet getCharacterSheet() {
+   // @GetMapping("/getCharacterSheet")
+   // public CharacterSheet getCharacterSheet() {
     	
-    	CharacterSheet sheet = new CharacterSheet();
+    	//CharacterSheet sheet = new CharacterSheet();
     	
     	// CharacterSheet rawSheet = characterSheetRepo.getOne(id);
     	
-    	// sheet.setStrength(rawSheet.getStrength());
-    	// sheet.setStrengthModifier(rawSheet.getStrength() * 10);
     	
-    	return sheet;
-    }
-    //@PostMapping("/saveCharacterSheet")
-    //public CharacterSheetSave create(@Valid @RequestBody CharacterSheet characterSheet ){
-    //    return CharacterSheetRepository.save(characterSheet);
+    	//return sheet;
    // }
+    @PostMapping("/saveCharacterSheet")                 
+    public HttpStatus addCharacterSheet(@RequestBody CharacterSheetEntity characterSheetEntity ){
+        characterSheetRepository.save(characterSheetEntity);
+       return HttpStatus.CREATED;
+    }
 }
