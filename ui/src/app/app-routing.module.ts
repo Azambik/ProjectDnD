@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { characterSheetComponent } from './characterSheet/characterSheet.component';
 
 const routes: Routes = [
   {
-    path: 'characterSheet',
-    component: characterSheetComponent
+    path: '',
+    loadChildren: () => import('src/app/modules/login/login.module').then(m => m.LoginModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('src/app/modules/login/login.module').then(m => m.LoginModule)
+    path: 'moodtracker',
+    loadChildren: () => import('src/app/modules/moodtracker/moodtracker.module').then(m => m.MoodtrackerModule)
   }
 ];
 

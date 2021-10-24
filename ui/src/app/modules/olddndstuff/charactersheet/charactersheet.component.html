@@ -1,0 +1,33 @@
+<cdk-virtual-scroll-viewport [itemSize]="275" style="height: 850px">
+<button label="Get Character Sheet" (click)="loadCharacterSheet()">Load character sheet</button>
+<button label="Create Character Sheet" (click)="createCharacterSheet()">Create/save character sheet</button>
+<div class="bg-dark character-sheet container">
+    <div class="row">
+        <div class="col-12 pb-5 border border-secondary">
+            <app-descriptionPanel></app-descriptionPanel>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col-3 p-2  border border-secondary">
+            <app-statPanel></app-statPanel>
+        </div>
+        <div class="col-3 p-2 border border-secondary">
+            <app-skillSavePanel></app-skillSavePanel>
+        </div>
+        <div class="col-3 p-2 border border-secondary">
+            <app-skillPanel></app-skillPanel>
+        </div>
+        <div class="col-3 p-2 border border-secondary">
+            <app-combat-panel></app-combat-panel>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 p-5 border border-secondary">
+            <app-character-details></app-character-details>
+        </div>
+    </div>
+    <div class="row">
+        <app-spell-panel></app-spell-panel>
+    </div>
+</div>
+</cdk-virtual-scroll-viewport>

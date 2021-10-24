@@ -1,0 +1,93 @@
+<div class="skillpanel ">
+    <div name="acrobatics">
+      <input type="checkbox" name="acrobaticsTick" [ngModel]="acrobaticsTick" (ngModelChange)="acrobaticsTick = $event; updateAcrobaticsTick($event)"> 
+      <input type="number" name="acrobaticsBonus" [ngModel]="acrobatics" (ngModelChange)="acrobatics = $event; updateAcrobatics($event)">
+      <label class="text-light" for="acrobatics">Acrobatics (dex)</label>
+    </div>
+    <div name="animal-handling">
+        <input type="checkbox" name="animalHandlingTick" [ngModel]="animalHandlingTick" (ngModelChange)="animalHandlingTick = $event; updateAnimalHandlingTick($event)"> 
+        <input type="number" name="animalHandlingBonus" [ngModel]="animalHandling" (ngModelChange)="animalHandling = $event; updateAnimalHandling($event)">
+        <label class="text-light" for="animal-handling">Animal handling (wis)</label>
+      </div>
+    <div name="arcana">
+        <input type="checkbox" name="arcana" [ngModel]="arcanaTick" (ngModelChange)="arcanaTick = $event; updateArcanaTick($event)"> 
+        <input type="number" name="arcanaBonus" [ngModel]="arcana" (ngModelChange)="arcana = $event; updateArcana($event)">
+        <label class="text-light" for="arcana">Arcana (int)</label>
+    </div>
+    <div name="athletics">
+        <input type="checkbox" name="athletics" [ngModel]="athleticsTick" (ngModelChange)="athleticsTick = $event; updateAthleticsTick($event)"> 
+        <input type="number" name="athleticsBonus" [ngModel]="athletics" (ngModelChange)="athletics = $event; updateAthletics($event)">
+        <label class="text-light" for="athletics">Athletics (str)</label>
+      </div>
+      <div name="deception">
+        <input type="checkbox" name="deception" [ngModel]="deceptionTick" (ngModelChange)="deceptionTick = $event; updateDeceptionTick($event)"> 
+        <input type="number" name="deceptionBonus" [ngModel]="deception" (ngModelChange)="deception = $event; updateDeception($event)">
+        <label class="text-light" for="deception">Deception (cha)</label>
+      </div>
+      <div name="history">
+        <input type="checkbox" name="history" [ngModel]="historyTick" (ngModelChange)="historyTick = $event; updateHistoryTick($event)">  
+        <input type="number" name="historyBonus" [ngModel]="history" (ngModelChange)="history = $event; updateHistory($event)">
+        <label class="text-light" for="history">history (int)</label>
+      </div>
+      <div name="insight">
+        <input type="checkbox" name="insight"[ngModel]="insightTick" (ngModelChange)="insightTick = $event; updateInsightTick($event)"> 
+        <input type="number" name="insightBonus" [ngModel]="insight" (ngModelChange)="insight = $event; updateInsight($event)">
+        <label class="text-light" for="insight">Insight (wis)</label>
+      </div>
+      <div name="intimidation">
+        <input type="checkbox" name="intimidation" [ngModel]="intimidationTick" (ngModelChange)="intimidationTick = $event; updateIntimidationTick($event)"> 
+        <input type="number" name="intimidationBonus" [ngModel]="intimidation" (ngModelChange)="intimidation = $event; updateIntimidation($event)">
+        <label class="text-light" for="intimidation">Intimidation (cha)</label>
+      </div>
+      <div name="investigation">
+        <input type="checkbox" name="investigation" [ngModel]="investigationTick" (ngModelChange)="investigationTick = $event; updateInvestigationTick($event)"> 
+        <input type="number" name="investigationBonus" [ngModel]="investigation" (ngModelChange)="investigation = $event; updateInvestigation($event)">
+        <label class="text-light" for="investigation">Investigation (int)</label>
+      </div>
+      <div name="medicine">
+        <input type="checkbox" name="medicine" [ngModel]="medicineTick" (ngModelChange)="medicineTick = $event; updateMedicineTick($event)"> 
+        <input type="number" name="medicineBonus" [ngModel]="medicine" (ngModelChange)="medicine = $event; updateMedicine($event)">
+        <label class="text-light" for="medicine">Medicine (wis)</label>
+      </div>
+      <div name="nature">
+        <input type="checkbox" name="nature" [ngModel]="natureTick" (ngModelChange)="natureTick = $event; updateNatureTick($event)"> 
+        <input type="number" name="natureBonus" [ngModel]="nature" (ngModelChange)="nature = $event; updateNature($event)">
+        <label class="text-light" for="nature">Nature (int)</label>
+      </div>
+      <div name="perception">
+        <input type="checkbox" name="perception" [ngModel]="perceptionTick" (ngModelChange)="perceptionTick = $event; updatePerceptionTick($event)"> 
+        <input type="number" name="perceptionBonus" [ngModel]="perception" (ngModelChange)="perception = $event; updatePerception($event)">
+        <label class="text-light" for="perception">Perception (wis)</label>
+      </div>
+      <div name="performance">
+        <input type="checkbox" name="performance" [ngModel]="performanceTick" (ngModelChange)="performanceTick = $event; updatePerformanceTick($event)"> 
+        <input type="number" name="performanceBonus" [ngModel]="performance" (ngModelChange)="performance = $event; updatePerformance($event)">
+        <label class="text-light" for="performance">Performance (cha)</label>
+      </div> 
+      <div name="persuasion">
+        <input type="checkbox" name="persuasion" [ngModel]="persuasionTick" (ngModelChange)="persuasionTick = $event; updatePersuasionTick($event)"> 
+        <input type="number" name="persuasionBonus" [ngModel]="persuasion" (ngModelChange)="persuasion = $event; updatePersuasion($event)">
+        <label class="text-light" for="persuasion">Persuasion (cha)</label>
+      </div>
+      <div name="religion">
+        <input type="checkbox" name="religion" [ngModel]="religionTick" (ngModelChange)="religionTick = $event; updateReligionTick($event)"> 
+        <input type="number" name="religionBonus" [ngModel]="religion" (ngModelChange)="religion = $event; updateReligion($event)">
+        <label class="text-light" for="religion">Religion (int))</label>
+      </div>
+      <div name="slight-of-hand">
+        <input type="checkbox" name="slightOfHand" [ngModel]="slightOfHandTick" (ngModelChange)="slightOfHandTick = $event; updateSlightOfHandTick($event)"> 
+        <input type="number" name="slightOfHandBonus" [ngModel]="slightOfHand" (ngModelChange)="slightOfHand = $event; updateSlightOfHand($event)">
+        <label class="text-light" for="slightOfHand">Slight of hand (dex)</label>
+      </div>
+      <div name="stealth">
+        <input type="checkbox" name="stealth" [ngModel]="stealthTick" (ngModelChange)="stealthTick = $event; updateStealthTick($event)"> 
+        <input type="number" name="stealthBonus" [ngModel]="stealth" (ngModelChange)="stealth = $event; updateStealth($event)">
+        <label class="text-light" for="stealth">Stealth (dex)</label>
+      </div>
+      <div name="survival">
+        <input type="checkbox" name="survival" [ngModel]="survivalTick" (ngModelChange)="survivalTick = $event; updateSurvivalTick($event)"> 
+        <input type="number" name="survivalBonus" [ngModel]="survival" (ngModelChange)="survival = $event; updateSurvival($event)">
+        <label class="text-light" for="survival">Survival (wis)</label>
+      </div>
+</div>
+<app-equipment-panel></app-equipment-panel>
