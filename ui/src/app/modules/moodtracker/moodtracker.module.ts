@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { MoodtrackerRoutingModule } from './moodtracker-routing.module';
 import { MoodtrackerLandingComponent } from './moodtracker-landing/moodtracker-landing.component';
 
@@ -11,7 +11,8 @@ import { MoodtrackerLandingComponent } from './moodtracker-landing/moodtracker-l
   ],
   imports: [
     CommonModule,
-    MoodtrackerRoutingModule
+    MoodtrackerRoutingModule,
+    FormsModule,
   ]
 })
 export class MoodtrackerModule { }
