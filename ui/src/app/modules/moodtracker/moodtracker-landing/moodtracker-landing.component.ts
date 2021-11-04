@@ -9,11 +9,9 @@ import { CharacterSheetService } from 'src/charactersheet.service';
 })
 export class MoodtrackerLandingComponent implements OnInit {
   moodText: string = "";
-
   constructor(private httpService: HttpService, private characterSheetService: CharacterSheetService) { }
-
+  
   dailyMood!: MoodPoint;
-
   ngOnInit(): void {
     this.moodText = this.characterSheetService.moodPoint.moodText;
   }
@@ -30,6 +28,7 @@ export class MoodtrackerLandingComponent implements OnInit {
     if (mood == "mad"){
       this.characterSheetService.moodPoint.mood = "mad"
     }
+    
     this.characterSheetService.printCharacter();
     console.log(JSON.parse(JSON.stringify(this.dailyMood)));
     this.httpService.saveMood(this.dailyMood);
