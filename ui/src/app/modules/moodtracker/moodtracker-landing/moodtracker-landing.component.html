@@ -9,5 +9,8 @@
         Mad
     </button>
     <p>Describe your mood</p>
-            <textarea name="moodText"rows="10" cols="50" (ngModelChange)="moodText = $event; updateMoodText($event)"[ngModel]="moodText"></textarea>
+    <!-- since all we need to do when the value change is assign it, we can condense this into one two-way binding element property -->
+    <!-- <textarea name="moodText"rows="10" cols="50" (ngModelChange)="moodText = $event; updateMoodText($event)"[ngModel]="moodText"></textarea> -->
+    <textarea name="moodText"rows="10" cols="50" [(ngModel)]="dailyMood.moodText"></textarea>
+    <!-- notice above that we can bind our models variable directly. This simplies a lot of code for us -->
 </div>
