@@ -4,17 +4,30 @@
   </span>
   <div class="col-2 flex flex-wrap align-content-center pt-3 justify-content-end">
     <button
-      pButton type="button " 
+      pButton 
+      type="button" 
       style="max-height: 1dvh; margin-right: 1em;"
       label="Log in" 
-      class="p-button-secondary">
+      class="p-button-secondary"
+      (click)="test()">
     </button>
-    <button
-      pButton type="button"
+    <button 
+      pButton 
+      type="button"
       style="max-height: 1dvh; margin-right: 1em;" 
-      label="Sign up">
-  </button>
+      label="Sign up"  
+      (click)="test()">
+    </button>  
   </div>
-
 </header>
 <h1 class="text"> hello World!</h1>
+
+<!--div class="modal-container">
+  <div #modal></div>
+</div-->
+
+
+
+
+
+       
