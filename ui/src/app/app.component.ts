@@ -3,7 +3,7 @@ import { User } from './models/User';
 import { HttpService } from './services/http.service';
 import { PrimeNGConfig } from 'primeng/api';
 import { Subscription } from 'rxjs';
-//import { ModalService } from '../app/services/modal-service/modal.service';
+import { ModalService } from '../app/services/modal-service/modal.service';
 
 @Component({
   selector: 'app-root',
@@ -14,12 +14,12 @@ export class AppComponent implements OnInit{
 
   constructor(
     private httpService: HttpService, 
-    private primeConfig: PrimeNGConfig
-    /*private modalService: ModalService*/) {}
+    private primeConfig: PrimeNGConfig,
+    private modalService: ModalService) {}
 
-   /* @ViewChild('modal', { read: ViewContainerRef })
+    @ViewChild('modal', { read: ViewContainerRef })
     entry!: ViewContainerRef;
-    sub!: Subscription;*/
+    sub!: Subscription;
   
 
   users?: User[] = [];
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit{
     }).catch((err) => console.error(err));*/
   }
 
-  /*openModal() {
+  openModal() {
     this.sub = this.modalService
       .openModal(this.entry, 'Are you sure ?', 'click confirm or close')
       .subscribe((v) => {
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit{
     }
     ngOnDestroy(): void {
       if (this.sub) this.sub.unsubscribe();
-    }*/
+    }
     test():void{
       console.log("test");
     }
