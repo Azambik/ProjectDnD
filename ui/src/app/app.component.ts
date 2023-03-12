@@ -3,7 +3,7 @@ import { User } from './models/User';
 import { HttpService } from './services/http.service';
 import { PrimeNGConfig } from 'primeng/api';
 import { Subscription } from 'rxjs';
-import { ModalService } from '../app/services/modal-service/modal.service';
+import { SignUpModalService } from './services/modal-service/signup-modal.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
   constructor(
     private httpService: HttpService, 
     private primeConfig: PrimeNGConfig,
-    private modalService: ModalService) {}
+    private signUpModalService: SignUpModalService) {}
 
     @ViewChild('modal', { read: ViewContainerRef })
     entry!: ViewContainerRef;
@@ -33,8 +33,8 @@ export class AppComponent implements OnInit{
   }
 
   openModal() {
-    this.sub = this.modalService
-      .openModal(this.entry, 'Are you sure ?', 'click confirm or close')
+    this.sub = this.signUpModalService
+      .openModal(this.entry, 'Sign up', '')
       .subscribe((v) => {
         //your logic
       });

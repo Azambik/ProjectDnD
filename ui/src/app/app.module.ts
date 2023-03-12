@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {ButtonModule} from 'primeng/button';
+import {PasswordModule} from 'primeng/password';
+
 
 
 
@@ -15,7 +17,8 @@ import {ButtonModule} from 'primeng/button';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ButtonModule
+    ButtonModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

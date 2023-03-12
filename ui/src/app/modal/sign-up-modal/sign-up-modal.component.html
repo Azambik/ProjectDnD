@@ -1,1 +1,31 @@
-<p>sign-up-modal works!</p>
+<div class="modal-container text">
+    <div class="default background">
+      <h1>sign up</h1>
+      <div class=" h-9rem">
+      <span class="p-float-label">
+        <input id="float-input" type="text" pInputText> 
+        <label for="float-input">Username</label>
+    </span>
+    <input type="password" pPassword />
+  </div>
+  
+      <div class="btn-container h-2rem">
+        <button
+          pButton 
+          type="button" 
+          style="width: 5em; margin-right: 1em;"
+          label="Confirm" 
+          class="p-button-secondary"
+          (click)="confirm()">
+      </button>
+      <button
+        pButton 
+        type="button" 
+        style="width: 5em; margin-right: 1em;"
+        label="close" 
+        class="p-button-secondary"
+        (click)="closeMe()">
+    </button>
+      </div>
+    </div>
+  </div>
