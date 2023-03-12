@@ -2,26 +2,67 @@ package server.projectdnd.DatabaseLayers.Entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name = "Users")
+@Entity
+@Table(name = "Users")
 public class User {
     
     @Id
-    private String username;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-    public User() {
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
+
+    private String email;
+
+    public User(){
+
+    }
+    public User(String firstName, String lastName, String email){
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
     }
 
-    public User(String username) {
-        this.username = username;
+    public long getId() {
+        return this.id;
     }
 
-    public String getUsername() {
-        return username;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
+

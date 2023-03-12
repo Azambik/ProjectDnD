@@ -4,6 +4,7 @@ import { HttpService } from './services/http.service';
 import { PrimeNGConfig } from 'primeng/api';
 import { Subscription } from 'rxjs';
 import { SignUpModalService } from './services/modal-service/signup-modal.service';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ export class AppComponent implements OnInit{
   constructor(
     private httpService: HttpService, 
     private primeConfig: PrimeNGConfig,
-    private signUpModalService: SignUpModalService) {}
+    private signUpModalService: SignUpModalService,
+    private userService: UserService) {}
 
     @ViewChild('modal', { read: ViewContainerRef })
     entry!: ViewContainerRef;
@@ -43,7 +45,16 @@ export class AppComponent implements OnInit{
       if (this.sub) this.sub.unsubscribe();
     }
     test():void{
-      console.log("test");
+      const newUser : User = {
+        firsName: "Andrw",
+        lastName: "Zambik",
+        email: "andrewjzambik@yahoo.com"
+      }
+     // this.userService.createUser(newUser);
+      this.userService.getUsers().subscribe((data: User[]) => {
+        console.log(data);
+        this.users = data;
+      })
     }
 
 }
