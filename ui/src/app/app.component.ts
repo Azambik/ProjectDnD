@@ -25,6 +25,11 @@ export class AppComponent implements OnInit{
   
 
   users?: User[] = [];
+  firstName!: string;
+  lastName!: string;
+  userName!: string;
+  email!: string;
+  passWord!: string;
 
   ngOnInit(): void {
     this.primeConfig.ripple = true;
@@ -45,16 +50,21 @@ export class AppComponent implements OnInit{
       if (this.sub) this.sub.unsubscribe();
     }
     test():void{
-      const newUser : User = {
-        firsName: "Andrw",
-        lastName: "Zambik",
-        email: "andrewjzambik@yahoo.com"
-      }
-     // this.userService.createUser(newUser);
       this.userService.getUsers().subscribe((data: User[]) => {
         console.log(data);
         this.users = data;
       })
+    }
+    createUser(){
+      const user : User = {
+        firstName: this.firstName,
+        lastName: this.lastName,
+        email: this.email,
+        userName: this.userName,
+        passWord: this.passWord
+
+      }
+      this.userService.createUser(user).subscribe();
     }
 
 }

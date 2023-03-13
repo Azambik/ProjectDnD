@@ -9,7 +9,6 @@ import { User } from '../models/User';
 export class UserService {
 
   private baseUrl = "http://localhost:8080/api/users";
-  private newUser = "http://localhost:8080/api/newUsers";
 
   constructor(private http: HttpClient) { }
 
@@ -17,7 +16,7 @@ export class UserService {
     return this.http.get<User[]>(`${this.baseUrl}`);
   }
 
- /* createUser(user: User): Observable<{}>{
-    return this.http.post<User>(this.newUser,user);
-  } */
+  createUser(user: User): Observable<{}>{
+    return this.http.post<User>(this.baseUrl,user);
+  } 
 }

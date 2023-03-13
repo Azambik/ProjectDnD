@@ -20,17 +20,26 @@ public class User {
 
     @Column(name = "last_name")
     private String lastName;
-
+    
+    @Column(unique = true, name = "email")
     private String email;
+
+    @Column(unique = true, name = "user_name")
+    private String userName;
+
+    @Column(name = "pass_word")
+    private String passWord;
 
     public User(){
 
     }
-    public User(String firstName, String lastName, String email){
+    public User(String firstName, String lastName, String email, String userName, String passWord){
         super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.userName = userName;
+        this.passWord = passWord;
     }
 
     public long getId() {
@@ -63,6 +72,22 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassWord() {
+        return this.passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 }
 

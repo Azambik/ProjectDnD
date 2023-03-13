@@ -5,9 +5,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {ButtonModule} from 'primeng/button';
 import {PasswordModule} from 'primeng/password';
-
-
-
+import {InputTextModule} from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,9 @@ import {PasswordModule} from 'primeng/password';
     AppRoutingModule,
     HttpClientModule,
     ButtonModule,
-    PasswordModule
+    PasswordModule,
+    InputTextModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,6 +12,7 @@ import {Component,Input,OnInit,Output,EventEmitter,OnDestroy,} from '@angular/co
     @Input() body: string = '';
     @Output() closeMeEvent = new EventEmitter();
     @Output() confirmEvent = new EventEmitter();
+    userName = ""
     ngOnInit(): void {
       console.log('Modal init');
     }
@@ -20,6 +21,7 @@ import {Component,Input,OnInit,Output,EventEmitter,OnDestroy,} from '@angular/co
       this.closeMeEvent.emit();
     }
     confirm() {
+      console.log(this.userName);
       this.confirmEvent.emit();
     }
     ngOnDestroy(): void {
