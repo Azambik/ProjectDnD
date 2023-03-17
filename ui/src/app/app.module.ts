@@ -7,10 +7,14 @@ import {ButtonModule} from 'primeng/button';
 import {PasswordModule} from 'primeng/password';
 import {InputTextModule} from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
+import { SignUpModal } from './modal/sign-up-modal/sign-up-modal.component';
+import {DialogService, DynamicDialogModule} from 'primeng/dynamicdialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignUpModal,
   ],
   imports: [
     BrowserModule,
@@ -19,9 +23,12 @@ import { FormsModule } from '@angular/forms';
     ButtonModule,
     PasswordModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    DynamicDialogModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DialogService],
+  bootstrap: [AppComponent],
+  entryComponents: [SignUpModal]
 })
 export class AppModule { }

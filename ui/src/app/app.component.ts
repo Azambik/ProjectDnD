@@ -3,8 +3,9 @@ import { User } from './models/User';
 import { HttpService } from './services/http.service';
 import { PrimeNGConfig } from 'primeng/api';
 import { Subscription } from 'rxjs';
-import { SignUpModalService } from './services/modal-service/signup-modal.service';
 import { UserService } from './services/user.service';
+import { DialogService } from 'primeng/dynamicdialog';
+import { SignUpModal } from './modal/sign-up-modal/sign-up-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,7 @@ export class AppComponent implements OnInit{
   constructor(
     private httpService: HttpService, 
     private primeConfig: PrimeNGConfig,
-    private signUpModalService: SignUpModalService,
+    private dialogService: DialogService,
     private userService: UserService) {}
 
     @ViewChild('modal', { read: ViewContainerRef })
@@ -40,11 +41,15 @@ export class AppComponent implements OnInit{
   }
 
   openModal() {
-    this.sub = this.signUpModalService
-      .openModal(this.entry, 'Sign up', '')
-      .subscribe((v) => {
-        //your logic
+    this.dialogService.open(SignUpModal, 
+      {
+        header: 'Sign up',
       });
+    // this.sub = this.signUpModalService
+    //   .openModal(this.entry, 'Sign up', '')
+    //   .subscribe((v) => {
+    //     //your logic
+    //   });
     }
     ngOnDestroy(): void {
       if (this.sub) this.sub.unsubscribe();
