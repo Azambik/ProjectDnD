@@ -5,6 +5,7 @@ import { PrimeNGConfig } from 'primeng/api';
 import { Subscription } from 'rxjs';
 import { UserService } from './services/user.service';
 import { DialogService } from 'primeng/dynamicdialog';
+import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { SignUpModal } from './modal/sign-up-modal/sign-up-modal.component';
 
 @Component({
@@ -24,8 +25,8 @@ export class AppComponent implements OnInit{
     entry!: ViewContainerRef;
     sub!: Subscription;
   
-
-  users?: User[] = [];
+  ref: DynamicDialogRef;
+  users?: User[];
   firstName!: string;
   lastName!: string;
   userName!: string;
@@ -34,42 +35,30 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.primeConfig.ripple = true;
-
-    /*this.httpService.getAllUsers().toPromise().then((users: User[] | undefined) => {
-      this.users = users;
-    }).catch((err) => console.error(err));*/
+  }
+  ngOnDestroy(): void {
+    if (this.sub) this.sub.unsubscribe();
   }
 
   openModal() {
-    this.dialogService.open(SignUpModal, 
+    this.ref = this.dialogService.open(SignUpModal, 
       {
         header: 'Sign up',
+        showHeader:false,
+        width: '30vw',
+        contentStyle: { 
+          'height': '50vh',
+          "background-color": "rgb(52, 52, 53)", 
+       seZIndex: 10000,
+      }   
       });
-    // this.sub = this.signUpModalService
-    //   .openModal(this.entry, 'Sign up', '')
-    //   .subscribe((v) => {
-    //     //your logic
-    //   });
-    }
-    ngOnDestroy(): void {
-      if (this.sub) this.sub.unsubscribe();
-    }
-    test():void{
-      this.userService.getUsers().subscribe((data: User[]) => {
-        console.log(data);
-        this.users = data;
+      this.ref.onClose.subscribe((user: User) =>{
+        if(user){
+         this.userService.createUser(user).subscribe();
+        }
       })
     }
-    createUser(){
-      const user : User = {
-        firstName: this.firstName,
-        lastName: this.lastName,
-        email: this.email,
-        userName: this.userName,
-        passWord: this.passWord
-
-      }
-      this.userService.createUser(user).subscribe();
+    test():void{
+      
     }
-
 }

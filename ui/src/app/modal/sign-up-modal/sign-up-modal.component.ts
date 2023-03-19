@@ -1,4 +1,8 @@
 import {Component,Input,OnInit,Output,EventEmitter,OnDestroy,} from '@angular/core';
+import {DynamicDialogRef} from 'primeng/dynamicdialog';
+import {DynamicDialogConfig} from 'primeng/dynamicdialog';
+import { User } from 'src/app/models/User';
+import { UserService } from 'src/app/services/user.service';
 
   
   @Component({
@@ -7,24 +11,41 @@ import {Component,Input,OnInit,Output,EventEmitter,OnDestroy,} from '@angular/co
     styleUrls: ['./sign-up-modal.component.css'],
   })
   export class SignUpModal implements OnInit, OnDestroy {
-    constructor() {}
-    @Input() title: string = '';
-    @Input() body: string = '';
-    @Output() closeMeEvent = new EventEmitter();
-    @Output() confirmEvent = new EventEmitter();
-    userName = ""
+    constructor(
+      public ref: DynamicDialogRef, 
+      public config: DynamicDialogConfig,
+      private userService: UserService
+    ) {}
+    userRef?: User[] = []
+    firstName: string;
+    lastName: string;
+    email: string;
+    userName: string;
+    passWord?: string
+    isDisabled=false;
+    
     ngOnInit(): void {
-      console.log('Modal init');
+      this.userService.getUsers().subscribe((data: User[]) => {
+        console.log(data);
+        this.userRef = data;
+      })
+    }
+    ngOnDestroy(): void {
+     
     }
   
     closeMe() {
-      this.closeMeEvent.emit();
+      this.ref.close();
     }
     confirm() {
-      console.log(this.userName);
-      this.confirmEvent.emit();
+      const newUser : User = {
+        firstName: this.firstName,
+        lastName: this.lastName,
+        email: this.email,
+        userName: this.userName,
+        passWord: this.passWord
+      }
+      this.ref.close(newUser);
     }
-    ngOnDestroy(): void {
-      console.log(' Modal destroyed');
-    }
+    
   }

@@ -1,34 +1,55 @@
-<div class="modal-container text">
-    <div class="default background">
-      <h1>sign up</h1>
-      <div class=" h-9rem">
+<div class="text grid flex justify-content-center">
+  <div>
+    <H1>Sign up</H1>
+  </div>
+  <div class="row pt-5">
+    <div class="col-2 flex">
+      <span class="p-float-label pr-2">
+        <input id="float-input" type="text" pInputText [(ngModel)]="firstName"> 
+        <label for="float-input">First name</label>
+      </span>
       <span class="p-float-label">
-        <input 
-          id="float-input" 
-          type="text" 
-          pInputText> 
-        <label for="float-input">Username</label>
-    </span>
-    <input type="password" pPassword />
-  </div>
-  
-      <div class="btn-container h-2rem">
-        <button
-          pButton 
-          type="button" 
-          style="width: 5em; margin-right: 1em;"
-          label="Confirm" 
-          class="p-button-secondary"
-          (click)="confirm()">
-      </button>
-      <button
-        pButton 
-        type="button" 
-        style="width: 5em; margin-right: 1em;"
-        label="close" 
-        class="p-button-secondary"
-        (click)="closeMe()">
-    </button>
-      </div>
+        <input id="float-input" type="text" pInputText [(ngModel)]="lastName"> 
+        <label for="float-input">Last name</label>
+      </span>
     </div>
+  <div class="row pt-3">
+    <div class="col-2 flex">
+      <span class="p-float-label pr-2">
+        <input id="float-input" type="text" pInputText [(ngModel)]="userName"> 
+        <label for="float-input">User Name</label>
+      </span>
+      <span class="p-float-label">
+        <input id="float-input" type="text" pInputText [(ngModel)]="email" > 
+        <label for="float-input">Email</label>
+      </span>
+    </div>
+   </div>
+   <div class="row pt-3">
+     <div class="col-12 flex justify-content-center">
+      <span class="p-float-label">
+      <input type="password" pPassword [(ngModel)]="passWord" />
+      <label for="float-input">Password</label>
+    </span>
+     </div>
   </div>
+   <div class="row pt-3 flex justify-content-center">
+    <button
+      pButton 
+      type="button" 
+      style="width: 6em; margin-right: 1em;"
+      label="Confirm" 
+      class="p-button-secondary"
+      [disabled]="isDisabled"
+      (click)="confirm()">
+    </button>
+    <button
+      pButton 
+      type="button" 
+      style="width: 6em; margin-right: 1em;"
+      label="close" 
+      class="p-button-secondary"
+      (click)="closeMe()">
+    </button>
+  </div>
+</div>
