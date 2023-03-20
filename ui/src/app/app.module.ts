@@ -10,11 +10,15 @@ import { FormsModule } from '@angular/forms';
 import { SignUpModal } from './modal/sign-up-modal/sign-up-modal.component';
 import {DialogService, DynamicDialogModule} from 'primeng/dynamicdialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DividerModule} from 'primeng/divider';
+import { LoginModal } from './modal/login/login.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpModal,
+    LoginModal
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InputTextModule,
     FormsModule,
     DynamicDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DividerModule
+    
   ],
   providers: [DialogService],
   bootstrap: [AppComponent],

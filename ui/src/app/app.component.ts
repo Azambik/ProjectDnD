@@ -7,6 +7,8 @@ import { UserService } from './services/user.service';
 import { DialogService } from 'primeng/dynamicdialog';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { SignUpModal } from './modal/sign-up-modal/sign-up-modal.component';
+import { LoginModal } from './modal/login/login.component';
+import { AuthenticationService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +21,8 @@ export class AppComponent implements OnInit{
     private httpService: HttpService, 
     private primeConfig: PrimeNGConfig,
     private dialogService: DialogService,
-    private userService: UserService) {}
+    private userService: UserService,
+    private authenticationService: AuthenticationService) {}
 
     @ViewChild('modal', { read: ViewContainerRef })
     entry!: ViewContainerRef;
@@ -32,6 +35,7 @@ export class AppComponent implements OnInit{
   userName!: string;
   email!: string;
   passWord!: string;
+  logedIn: boolean;
 
   ngOnInit(): void {
     this.primeConfig.ripple = true;
@@ -40,16 +44,18 @@ export class AppComponent implements OnInit{
     if (this.sub) this.sub.unsubscribe();
   }
 
-  openModal() {
+  openSignUpModal() {
     this.ref = this.dialogService.open(SignUpModal, 
       {
         header: 'Sign up',
         showHeader:false,
-        width: '30vw',
+        width: '25vw',
         contentStyle: { 
-          'height': '50vh',
-          "background-color": "rgb(52, 52, 53)", 
-       seZIndex: 10000,
+        'height': '75vh',
+        "background-color": "rgb(52, 52, 53)", 
+        "border-radius": "25px",
+        "overflow": "hidden",
+        seZIndex: 10000,
       }   
       });
       this.ref.onClose.subscribe((user: User) =>{
@@ -58,7 +64,31 @@ export class AppComponent implements OnInit{
         }
       })
     }
-    test():void{
-      
+    
+    openLogInModal() {
+      this.ref = this.dialogService.open(LoginModal, 
+        {
+          header: 'Sign up',
+          showHeader:false,
+          width: '25vw',
+          contentStyle: { 
+          'height': '25vh',
+          "background-color": "rgb(52, 52, 53)", 
+          "border-radius": "25px",
+          "overflow": "hidden",
+          seZIndex: 10000,
+        }   
+        });
+        this.ref.onClose.subscribe(() =>{
+          this.logedIn = this.authenticationService.isUserLoggedIn();
+        })
+      }
+    
+    signOut(){
+      this.authenticationService.logout();
+      this.logedIn = false;
+    }
+    test(){
+     console.log(this.authenticationService.getLogedinUserName());
     }
 }

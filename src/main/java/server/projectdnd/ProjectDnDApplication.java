@@ -20,8 +20,5 @@ public class ProjectDnDApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String...args) throws Exception {
-		//this.userRepository.save(new User("bob", "grey", "bgrey@gmail.com"));
-        //this.userRepository.save(new User("Tom", "Cruise", "tom@gmail.com"));
-      //  this.userRepository.save(new User("Tony", "Stark", "tony@gmail.com"));
 	}
 }
