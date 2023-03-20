@@ -1,1 +1,34 @@
-<h1> hello world!</h1>
+<header class="header grid">
+  <span class="text col-10">
+      Projectdnd  
+  </span>
+  <div class="col-2 flex flex-wrap align-content-center pt-3 justify-content-end" *ngIf="!logedIn">
+    <button
+      pButton 
+      type="button" 
+      style="max-height: 1dvh; margin-right: 1em;"
+      label="Log in" 
+      class="p-button-secondary"
+      (click)="openLogInModal()">
+    </button>
+    <button 
+      pButton 
+      type="button"
+      style="max-height: 1dvh; margin-right: 1em;" 
+      label="Sign up"  
+      (click)="openSignUpModal()">
+    </button>  
+  </div>
+  <div class="col-2 flex flex-wrap align-content-center pt-3 justify-content-end" *ngIf="logedIn">
+    <button
+      pButton 
+      type="button" 
+      style="max-height: 1dvh; margin-right: 1em;"
+      label="Sign out" 
+      class="p-button-secondary"
+      (click)="signOut()">
+    </button>
+  </div>
+</header>
+<router-outlet></router-outlet>
+<h1 class="text"> hello World!</h1>

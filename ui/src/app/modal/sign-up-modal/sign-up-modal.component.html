@@ -1,0 +1,72 @@
+<div class="text grid flex justify-content-center">
+  <div>
+    <H1>Sign up</H1>
+  </div>
+  <div class="row pt-5">
+    <div class="col-2 flex">
+      <span class="p-float-label pr-2">
+        <input id="float-input" type="text" pInputText [(ngModel)]="firstName" (ngModelChange)="validateinput('firstName');"> 
+        <label for="float-input">First name</label>
+        <small *ngIf="!validFirstName" class="p-error block">First name is Requiered.</small>
+      </span>
+      <span class="p-float-label">
+        <input id="float-input" type="text" pInputText [(ngModel)]="lastName" (ngModelChange)="validateinput('lastName');"> 
+        <label for="float-input">Last name</label>
+        <small *ngIf="!validLastName" class="p-error block">Last name is Requiered.</small>
+      </span>
+    </div>
+  <div class="row pt-3">
+    <div class="col-2 flex">
+      <span class="p-float-label pr-2">
+        <input id="float-input" type="text" pInputText [(ngModel)]="userName" (ngModelChange)="validateinput('userName');"> 
+        <label for="float-input">User Name</label>
+        <small *ngIf="!validUserName" class="p-error block">User name not valid.</small>
+      </span>
+      <span class="p-float-label">
+        <input id="float-input" type="text" pInputText [(ngModel)]="email" (ngModelChange)="validateinput('email');"> 
+        <label for="float-input">Email</label>
+        <small *ngIf="!validEmail" class="p-error block">Email is not valid.</small>
+      </span>
+    </div>
+   </div>
+   <div class="row pt-3">
+     <div class="col-12 flex justify-content-center">
+      <p-password [(ngModel)]="passWord" (ngModelChange)="validateinput('passWord');" >
+        <ng-template pTemplate="header">
+          <h6>Pick a password</h6>
+        </ng-template>
+        <ng-template pTemplate="footer">
+          <p-divider></p-divider>
+          <p class="mt-2">Suggestions</p>
+          <ul class="pl-2 ml-2 mt-0" style="line-height: 1">
+              <li>At least one uppercase</li>
+              <li>At least one numeric</li>
+              <li>Minimum 8 characters</li>
+          </ul>
+        </ng-template>
+      </p-password>
+     </div>
+     <div class="row flex justify-content-center">
+      <small *ngIf="!validPassword" class="p-error block">Password is not valid.</small>
+     </div>
+   </div>
+   <div class="row pt-3 pl-3 flex justify-content-center">
+    <button
+      pButton 
+      type="button" 
+      style="width: 6em; margin-right: 1em;"
+      label="Submit" 
+      class="p-button-secondary"
+      [disabled]="isDisabled"
+      (click)="confirm()">
+    </button>
+    <button
+      pButton 
+      type="button" 
+      style="width: 6em; margin-right: 1em;"
+      label="close" 
+      class="p-button-secondary"
+      (click)="closeMe()">
+    </button>
+  </div>
+</div>
