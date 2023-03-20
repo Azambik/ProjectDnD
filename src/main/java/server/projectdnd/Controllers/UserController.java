@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,12 +34,10 @@ public class UserController {
     //@GetMapping("users/login")
     @RequestMapping(value="user/login", method = RequestMethod.GET)
     public @ResponseBody boolean getUsersforLogin(@RequestParam("userName") String userName, @RequestParam("passWord") String passWord) {
-      System.out.println(userName);
       boolean validLogin = false;
       List < User > userList = this.userRepository.findAll();
       if(userList != null){
         for(User userRef: userList){
-            System.out.println(userRef.getUserName());
             if(userRef.getUserName().equals(userName) && userRef.getPassWord().equals(passWord)){
                validLogin = true;
             }

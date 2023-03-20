@@ -88,7 +88,4 @@ export class AppComponent implements OnInit{
       this.authenticationService.logout();
       this.logedIn = false;
     }
-    test(){
-     console.log(this.authenticationService.getLogedinUserName());
-    }
 }
