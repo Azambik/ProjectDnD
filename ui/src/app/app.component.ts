@@ -8,7 +8,7 @@ import { DialogService } from 'primeng/dynamicdialog';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { SignUpModal } from './modal/sign-up-modal/sign-up-modal.component';
 import { LoginModal } from './modal/login/login.component';
-import { AuthenticationService } from './services/authentication.service';
+
 
 @Component({
   selector: 'app-root',
@@ -21,8 +21,7 @@ export class AppComponent implements OnInit{
     private httpService: HttpService, 
     private primeConfig: PrimeNGConfig,
     private dialogService: DialogService,
-    private userService: UserService,
-    private authenticationService: AuthenticationService) {}
+    private userService: UserService,) {}
 
     @ViewChild('modal', { read: ViewContainerRef })
     entry!: ViewContainerRef;
@@ -39,6 +38,8 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.primeConfig.ripple = true;
+    this.logedIn = this.userService.isLoggedIn;
+    console.log(this.userService.getCurrentUser);
   }
   ngOnDestroy(): void {
     if (this.sub) this.sub.unsubscribe();
@@ -80,12 +81,13 @@ export class AppComponent implements OnInit{
         }   
         });
         this.ref.onClose.subscribe(() =>{
-          this.logedIn = this.authenticationService.isUserLoggedIn();
+          console.log(this.userService.isLoggedIn);
+          this.logedIn = this.userService.isLoggedIn;
         })
       }
     
     signOut(){
-      this.authenticationService.logout();
+      this.userService.doLogout();
       this.logedIn = false;
     }
 }

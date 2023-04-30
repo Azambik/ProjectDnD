@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { AuthenticationService } from '../../services/authentication.service';
+import { UserService } from 'src/app/services/user.service';
+import { User } from '../../models/User';
+
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ export class LoginModal implements OnInit, OnDestroy  {
   constructor(
     public ref: DynamicDialogRef, 
     public config: DynamicDialogConfig,
-    private authenticationService: AuthenticationService) { }
+    private userService: UserService) { }
 
   userName: string;
   passWord: string
@@ -21,7 +23,11 @@ export class LoginModal implements OnInit, OnDestroy  {
   ngOnDestroy(): void {}
 
   login(): void {
-    this.authenticationService.login(this.userName,this.passWord).subscribe();
+    const user : User = {
+      userName: this.userName,
+      passWord: this.passWord
+    }
+    this.userService.signIn(user)
     this.ref.close();
   }
   closeMe() {

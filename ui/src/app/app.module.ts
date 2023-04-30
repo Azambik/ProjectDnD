@@ -12,13 +12,20 @@ import {DialogService, DynamicDialogModule} from 'primeng/dynamicdialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DividerModule} from 'primeng/divider';
 import { LoginModal } from './modal/login/login.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './shared/authconfig.interceptor';
+import { CardModule } from 'primeng/card';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ForumLandingComponent } from './modules/forum-landing/forum-landing.component';
+import { TabViewModule } from 'primeng/tabview';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpModal,
-    LoginModal
+    LoginModal,
+    ForumLandingComponent
   ],
   imports: [
     BrowserModule,
@@ -30,10 +37,20 @@ import { LoginModal } from './modal/login/login.component';
     FormsModule,
     DynamicDialogModule,
     BrowserAnimationsModule,
-    DividerModule
+    DividerModule,
+    CardModule,
+    FontAwesomeModule,
+    TabViewModule
     
   ],
-  providers: [DialogService],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    DialogService
+  ],
   bootstrap: [AppComponent],
   entryComponents: [SignUpModal]
 })
