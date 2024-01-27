@@ -18,6 +18,7 @@ import { CardModule } from 'primeng/card';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ForumLandingComponent } from './modules/forum-landing/forum-landing.component';
 import { TabViewModule } from 'primeng/tabview';
+import { TableModule } from 'primeng/table';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { TabViewModule } from 'primeng/tabview';
     DividerModule,
     CardModule,
     FontAwesomeModule,
-    TabViewModule
+    TabViewModule,
+    TableModule
     
   ],
   providers: [

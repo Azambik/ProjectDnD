@@ -1,1 +1,30 @@
-<p>forum-landing works!</p>
+<div>
+    <button
+      pButton 
+      type="button" 
+      style="max-height: 1dvh; margin-right: 1em;"
+      label="Go to selected discusion" 
+      class="p-button-secondary"
+      (click)="loadForum()">
+    </button>
+<p-table [value]="forumList" selectionMode="single" [(selection)]="selectedForum" dataKey="name" (sortFunction)="customSort($event)" [customSort]="true" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th pSortableColumn="name" style="width:20%">Name <p-sortIcon field="name"></p-sortIcon></th>
+            <th pSortableColumn="ownerName" style="width:20%">Owner <p-sortIcon field="ownerName"></p-sortIcon></th>
+            <th pSortableColumn="catagory" style="width:20%">Category <p-sortIcon field="catagory"></p-sortIcon></th>
+            <th pSortableColumn="replyCount" style="width:20%">Reply count <p-sortIcon field="replyCount"></p-sortIcon></th>
+            <th pSortableColumn="lastPostDate" style="width:20%">Latest post date <p-sortIcon field="lastPostDate"></p-sortIcon></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-forumList>
+        <tr [pSelectableRow]="forumList">
+            <td>{{forumList.name}}</td>
+            <td>{{forumList.ownerName}}</td>
+            <td>{{forumList.catagory}}</td>
+            <td>{{forumList.replyCount}}</td>
+            <td>{{forumList.lastPostDate}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+</div>
